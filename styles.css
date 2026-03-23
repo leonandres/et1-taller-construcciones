@@ -250,3 +250,65 @@ footer {
         font-weight: bold;
     }
 }
+
+/*Historia*/
+
+/* --- Línea de tiempo (Timeline) --- */
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem 0;
+    padding-left: 2rem;
+    border-left: 3px solid var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* El punto en la línea de tiempo */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.65rem; /* Ajuste para centrar sobre la línea del borde */
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--accent);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--border);
+}
+
+.timeline-year {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid var(--border);
+}
+
+.timeline-content h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: #576574;
+}
