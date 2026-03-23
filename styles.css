@@ -1,0 +1,252 @@
+/* Variables y configuración base */
+:root {
+    --primary: #1a2a3a; /* Azul oscuro institucional */
+    --accent: #e67e22;  /* Naranja industrial/técnico */
+    --bg: #f4f7f9;
+    --text: #2c3e50;
+    --white: #ffffff;
+    --border: #d1d8e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    display: flex;
+}
+
+/* --- Barra lateral (sidebar) --- */
+aside {
+    width: 280px;
+    background-color: var(--primary);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    border-right: 4px solid var(--accent);
+}
+
+aside h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+aside .school-name {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 0.8rem;
+}
+
+nav a {
+    color: #a4b0be;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+nav a.active {
+    background-color: var(--accent);
+    color: white;
+    font-weight: 600;
+}
+
+/* --- Contenido principal --- */
+main {
+    margin-left: 280px;
+    padding: 4rem;
+    width: 100%;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.badge {
+    background-color: #34495e;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin: 2.5rem 0 1rem 0;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2.5rem;
+    border-bottom: 5px solid var(--accent);
+}
+
+.intro-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-left: 6px solid var(--accent);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2.5rem;
+}
+
+.intro-box p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* --- Tabla de comparación con divs (CSS Grid) --- */
+.table-section {
+    margin: 3rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+}
+
+.grid-row:last-child {
+    border-bottom: none;
+}
+
+.header-row {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+.grid-item {
+    padding: 1.2rem;
+    font-size: 1rem;
+}
+
+/* --- Cuadrícula de pilares --- */
+.grid-pilares {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.pilar-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.pilar-card:hover {
+    transform: translateY(-5px);
+}
+
+.pilar-card h4 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.pilar-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: #576574;
+}
+
+footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: 600;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 900px) {
+    aside { width: 0; display: none; }
+    main { margin-left: 0; padding: 2rem; }
+    .grid-pilares { grid-template-columns: 1fr; }
+    
+    /* Adaptar la tabla div a pantallas pequeñas */
+    .grid-row {
+        grid-template-columns: 1fr;
+        border-bottom: 3px solid var(--border);
+    }
+    .header-row {
+        display: none; /* Ocultamos la cabecera en móviles para apilar la info */
+    }
+    .grid-item {
+        border-bottom: 1px solid #eee;
+    }
+    .grid-item:first-child {
+        background-color: var(--primary);
+        color: white;
+        font-weight: bold;
+    }
+}

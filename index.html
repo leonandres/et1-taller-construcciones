@@ -3,263 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construcción en Seco | ET N°1</title>
+    <title>Construcción en seco | ET N°1</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #1a2a3a; /* Azul oscuro institucional */
-            --accent: #e67e22;  /* Naranja industrial/técnico */
-            --bg: #f4f7f9;
-            --text: #2c3e50;
-            --white: #ffffff;
-            --border: #d1d8e0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            display: flex;
-        }
-
-        /* --- BARRA LATERAL (SIDEBAR) --- */
-        aside {
-            width: 280px;
-            background-color: var(--primary);
-            color: white;
-            height: 100vh;
-            position: fixed;
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            z-index: 100;
-            border-right: 4px solid var(--accent);
-        }
-
-        aside h1 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-        }
-
-        aside .school-name {
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            display: block;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav li {
-            margin-bottom: 0.8rem;
-        }
-
-        nav a {
-            color: #a4b0be;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: block;
-            padding: 12px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-            color: white;
-        }
-
-        nav a.active {
-            background-color: var(--accent);
-            color: white;
-            font-weight: 600;
-        }
-
-        /* --- CONTENIDO PRINCIPAL --- */
-        main {
-            margin-left: 280px;
-            padding: 4rem;
-            width: 100%;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            background-color: #34495e;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            display: inline-block;
-            letter-spacing: 1px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin: 2.5rem 0 1rem 0;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.5rem;
-        }
-
-        p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            margin-bottom: 2.5rem;
-            border-bottom: 5px solid var(--accent);
-        }
-
-        .intro-box {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 6px solid var(--accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 2.5rem;
-        }
-
-        .intro-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        .highlight {
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        /* Tabla de Comparación */
-        .table-section {
-            margin: 3rem 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        th {
-            background-color: var(--primary);
-            color: white;
-            text-align: left;
-            padding: 1.2rem;
-            font-size: 1rem;
-        }
-
-        td {
-            padding: 1.2rem;
-            border-bottom: 1px solid var(--border);
-            vertical-align: top;
-        }
-
-        /* Cuadrícula de Pilares */
-        .grid-pilares {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .pilar-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            border-top: 4px solid var(--accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .pilar-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .pilar-card h4 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        .pilar-card p {
-            font-size: 0.95rem;
-            margin-bottom: 0;
-            color: #576574;
-        }
-
-        footer {
-            margin-top: 5rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            font-weight: 600;
-        }
-
-        /* Responsivo */
-        @media (max-width: 900px) {
-            aside { width: 0; display: none; }
-            main { margin-left: 0; padding: 2rem; }
-            .grid-pilares { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <aside>
-        <h1>Construcción en Seco</h1>
+        <h1>Construcción en seco</h1>
         <span class="school-name">Escuela Técnica N°1</span>
         <nav>
             <ul>
-                <li><a href="#" class="active">1. Filosofía del Sistema</a></li>
-                <li><a href="#">2. Historia y Evolución</a></li>
+                <li><a href="#" class="active">1. Filosofía del sistema</a></li>
+                <li><a href="#">2. Historia y evolución</a></li>
                 <li><a href="#">3. Sistemas (Wood/Steel)</a></li>
-                <li><a href="#">4. Tabiquería y Placas</a></li>
-                <li><a href="#">5. Ventajas Técnicas</a></li>
-                <li><a href="#">6. Guía de Taller</a></li>
+                <li><a href="#">4. Tabiquería y placas</a></li>
+                <li><a href="#">5. Ventajas técnicas</a></li>
+                <li><a href="#">6. Guía de taller</a></li>
             </ul>
         </nav>
     </aside>
 
     <main>
         <div class="container">
-            <span class="badge">Unidad Temática 1</span>
-            <h2>1.1 ¿Qué es la Construcción en Seco?</h2>
+            <span class="badge">Unidad temática 1</span>
+            <h2>1.1 ¿Qué es la construcción en seco?</h2>
             
             <img src="https://www.mcdonaldjoneshomes.com.au/sites/default/files/styles/hero_image/public/steel-frame-house.jpg?itok=3bWcm5dK" 
                  alt="Obra de Steel Frame mostrando la estructura de acero galvanizado" 
@@ -276,35 +44,32 @@
             <p>Por el contrario, la construcción en seco emplea <strong>elementos fuertemente industrializados</strong>. En lugar de adherir piezas con morteros, los componentes de la obra se vinculan mecánicamente. Para ello se utilizan tornillos autoperforantes, clips de fijación, remaches estructurales o adhesivos químicos específicos. Al no depender de tiempos de secado, el avance de la obra es continuo y predecible.</p>
 
             <div class="table-section">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Variable Técnica</th>
-                            <th>Tradicional (Húmeda)</th>
-                            <th>En Seco (Industrializada)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Método de Unión</strong></td>
-                            <td>Mezclas con agua (morteros, revoques). Dependencia química in situ.</td>
-                            <td>Fijaciones mecánicas (tornillos, anclajes). Dependencia física y de cálculo.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Tiempos de Obra</strong></td>
-                            <td>Lentos. Condicionados por el clima exterior y los tiempos de fraguado.</td>
-                            <td>Muy rápidos. Trabajo continuo al no requerir tiempos de secado de materiales.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gestión de Residuos</strong></td>
-                            <td>Alta generación de escombros, desperdicios de mezcla y suciedad en el predio.</td>
-                            <td>Generación mínima de residuos. Entorno de obra limpio y materiales reciclables.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="grid-row header-row">
+                    <div class="grid-item">Variable técnica</div>
+                    <div class="grid-item">Tradicional (húmeda)</div>
+                    <div class="grid-item">En seco (industrializada)</div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="grid-item"><strong>Método de unión</strong></div>
+                    <div class="grid-item">Mezclas con agua (morteros, revoques). Dependencia química in situ.</div>
+                    <div class="grid-item">Fijaciones mecánicas (tornillos, anclajes). Dependencia física y de cálculo.</div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="grid-item"><strong>Tiempos de obra</strong></div>
+                    <div class="grid-item">Lentos. Condicionados por el clima exterior y los tiempos de fraguado.</div>
+                    <div class="grid-item">Muy rápidos. Trabajo continuo al no requerir tiempos de secado de materiales.</div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="grid-item"><strong>Gestión de residuos</strong></div>
+                    <div class="grid-item">Alta generación de escombros, desperdicios de mezcla y suciedad en el predio.</div>
+                    <div class="grid-item">Generación mínima de residuos. Entorno de obra limpio y materiales reciclables.</div>
+                </div>
             </div>
 
-            <h3>🧩 Filosofía Clave: Los 4 Ejes del Sistema</h3>
+            <h3>🧩 Filosofía clave: Los 4 ejes del sistema</h3>
             <p>El éxito de la construcción en seco no recae solo en comprar buenos materiales, sino en entender cómo se combinan. La filosofía de este método se sostiene en cuatro pilares que todo estudiante técnico debe dominar:</p>
 
             <div class="grid-pilares">
@@ -313,21 +78,21 @@
                     <p>Los componentes (perfiles de acero, placas de yeso o cementicias, aislantes) se fabrican en plantas industriales bajo estrictas normas de calidad y con medidas estandarizadas. Esto garantiza uniformidad y elimina la variabilidad o el error artesanal de fabricar elementos "a ojo" en la obra.</p>
                 </div>
                 <div class="pilar-card">
-                    <h4>🔨 Montaje en Obra</h4>
+                    <h4>🔨 Montaje en obra</h4>
                     <p>El lugar de trabajo deja de ser una "fábrica" de morteros y paredes, para convertirse estrictamente en un lugar de <strong>ensamblaje</strong>. El proceso es similar al de armar un mecanismo complejo o un "mecano", exigiendo precisión en la lectura de planos y destreza en el uso de herramientas eléctricas.</p>
                 </div>
                 <div class="pilar-card">
-                    <h4>🌍 Menor Impacto Ambiental</h4>
+                    <h4>🌍 Menor impacto ambiental</h4>
                     <p>Al ser un sistema planificado, se calcula exactamente el material necesario, reduciendo drásticamente los desperdicios. Además, el consumo de agua es casi nulo, se requiere menos energía para el transporte (al ser materiales más livianos) y componentes como el acero son 100% reciclables.</p>
                 </div>
                 <div class="pilar-card">
-                    <h4>🏗️ Flexibilidad y Mantenimiento</h4>
+                    <h4>🏗️ Flexibilidad y mantenimiento</h4>
                     <p>A diferencia de un muro de mampostería maciza, los sistemas en seco permiten realizar modificaciones de distribución, futuras ampliaciones, e incluso desmontajes parciales con enorme facilidad. Reparar una tubería interna implica desatornillar una placa, arreglar y volver a tapar, sin generar escombros masivos.</p>
                 </div>
             </div>
 
             <footer>
-                © 2026 - Taller 4° Construcciones - ET N°1
+                © 2026 - Material didáctico para alumnos - Departamento de construcciones - ET N°1
             </footer>
         </div>
     </main>
