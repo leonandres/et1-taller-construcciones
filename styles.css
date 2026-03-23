@@ -349,3 +349,19 @@ footer {
 .card-content {
     padding: 1.5rem;
 }
+
+/* Botones de "Leer más" en las tarjetas */
+.btn-leer-mas {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.btn-leer-mas:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}

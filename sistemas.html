@@ -6,6 +6,58 @@
     <title>Sistemas de Construcción en Seco | ET N°1</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .quiz-container {
+            background: #fff;
+            border: 2px dashed var(--primary);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .quiz-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .btn-quiz {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        .btn-quiz:hover {
+            background-color: var(--accent);
+        }
+        #quiz-feedback {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            min-height: 24px;
+        }
+        .correcto { color: #27ae60; }
+        .incorrecto { color: #e74c3c; }
+        .btn-leer-mas {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .btn-leer-mas:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,10 +67,11 @@
         <nav>
             <ul>
                 <li><a href="index.html">1. Filosofía del sistema</a></li>
-                <li><a href="historia.html">2. Historia y origen</a></li>
+                <li><a href="historia.html">2. Historia y evolución</a></li>
                 <li><a href="sistemas.html" class="active">3. Sistemas de construcción</a></li>
-                <li><a href="analisis.html">4. Ventajas y limitaciones</a></li>
-                <li><a href="guia.html">5. Guía de taller y montaje</a></li>
+                <li><a href="tabiqueria.html">4. Tabiquería y placas</a></li>
+                <li><a href="ventajas.html">5. Ventajas técnicas</a></li>
+                <li><a href="guia.html">6. Guía de taller</a></li>
             </ul>
         </nav>
     </aside>
@@ -28,28 +81,29 @@
             <span class="badge">Unidad temática 3</span>
             <h2>Sistemas de construcción en seco</h2>
             
-            <img src="img/sistemas-varios.jpg" 
+            <img src="img/construccion-en-seco.jpeg" 
                  alt="Múltiples sistemas de construcción en seco conviviendo en una obra" 
                  class="hero-image">
 
             <div class="intro-box">
-                <p>El universo de la construcción en seco abarca mucho más que perfiles y placas. La clave para clasificar estos sistemas es entender su función en la obra. La distinción que define si un proyecto es un éxito o si termina en el suelo, es la diferencia entre los <span class="highlight">sistemas estructurales</span> (los que soportan el edificio) y los <span class="highlight">sistemas no estructurales</span> (los que solo dividen).</p>
+                <p>El universo de la construcción en seco abarca mucho más que perfiles y placas de yeso. La clave para clasificar estos sistemas es entender su función física y mecánica en la obra. La distinción principal que define cómo se calcula un proyecto es la diferencia entre los <span class="highlight">sistemas estructurales</span> (los que soportan el peso del edificio), los <span class="highlight">sistemas no estructurales</span> (los que dividen espacios), los <span class="highlight">sistemas de envolvente</span> (que protegen del clima) y los <span class="highlight">sistemas modulares</span> (prefabricación total).</p>
             </div>
 
             <div style="background-color: #f8f9fa; border: 1px solid #d1d8e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 3rem;">
-                <h4 style="color: var(--primary); margin-bottom: 0.5rem;">📊 El impacto logístico (Datos del INCOSE)</h4>
-                <p style="font-size: 0.95rem; margin-bottom: 0;">Según el <strong>Instituto de la Construcción en Seco (INCOSE)</strong>, una vivienda construida con Steel Framing pesa apenas un <strong>10%</strong> en comparación con una obra húmeda tradicional. Esto significa menos camiones de flete arruinando el asfalto del barrio, menos combustible gastado y un ahorro gigante en la logística.</p>
+                <h4 style="color: var(--primary); margin-bottom: 0.5rem;">📊 El impacto logístico</h4>
+                <p style="font-size: 0.95rem; margin-bottom: 0;">En Argentina, existe un organismo dedicado exclusivamente a estudiar, estandarizar y promover este método constructivo, llamado <strong>Instituto de la Construcción en Seco (INCOSE)</strong>. Este instituto afirma que una vivienda construida con Steel Framing pesa apenas un <strong>10%</strong> en comparación con una obra húmeda tradicional. Esto significa una reducción drástica en el transporte de carga pesada, menor consumo de combustible y un ahorro gigante en la logística integral de la obra.</p>
             </div>
 
-            <h3>🏗️ Sistemas estructurales (El esqueleto portante)</h3>
-            <p><strong>Atención:</strong> Estos sistemas <strong>soportan el peso de la casa</strong>. Si se arman mal, la casa se cae. Fin del cuento. Su función es transmitir las cargas de los techos y el viento hacia los cimientos.</p>
+            <h3>🏗️ 1. Sistemas estructurales (El esqueleto portante)</h3>
+            <p><strong>Atención:</strong> Estos sistemas <strong>soportan el peso de la edificación</strong>. Transmiten las cargas gravitatorias (techos, entrepisos, mobiliario, personas) y las cargas dinámicas (viento, sismos) hacia las fundaciones. Requieren cálculo de ingeniería civil y perfiles de calibres específicos.</p>
 
             <div class="grid-pilares">
                 <div class="pilar-card sin-padding-top">
                     <img src="https://images.pexels.com/photos/1463917/pexels-photo-1463917.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Steel Framing">
                     <div class="card-content">
                         <h4>⚙️ Steel Framing</h4>
-                        <p>Entramado de perfiles de chapa de acero galvanizado unidos con tornillos. <em>Es como armar un mecano gigante, pero con esteroides.</em> Incombustible y dimensionalmente exacto.</p>
+                        <p>Es un sistema de entramado compuesto por perfiles de chapa de acero galvanizado estructural (calibres de 0.9mm o superiores). Se unen entre sí utilizando tornillos autoperforantes especiales. El galvanizado protege al acero de la oxidación mediante una capa de zinc. Al ser un material inorgánico, no sufre ataques de termitas, no se deforma con la humedad y es completamente incombustible. Es el estándar moderno por su precisión milimétrica.</p>
+                        <a href="#" class="btn-leer-mas">Ver unidad completa &rarr;</a>
                     </div>
                 </div>
 
@@ -57,15 +111,16 @@
                     <img src="https://images.pexels.com/photos/2209529/pexels-photo-2209529.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Wood Framing">
                     <div class="card-content">
                         <h4>🌲 Wood Framing</h4>
-                        <p>Entramado de madera aserrada unida con clavos y herrajes. <em>El clásico de las películas de Hollywood donde el protagonista atraviesa la pared.</em> Excelente aislante natural.</p>
+                        <p>Es el sistema constructivo predominante en Norteamérica. Consiste en un entramado de listones de madera aserrada, la cual es secada en hornos para garantizar su estabilidad dimensional y tratada con químicos para evitar plagas y hongos. Las uniones se realizan con clavadoras neumáticas y herrajes de acero galvanizado. Su ventaja técnica principal es que la madera es un excelente aislante térmico natural, minimizando los puentes térmicos en la estructura.</p>
+                        <a href="#" class="btn-leer-mas">Ver unidad completa &rarr;</a>
                     </div>
                 </div>
 
                 <div class="pilar-card sin-padding-top">
                     <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Paneles SIP">
                     <div class="card-content">
-                        <h4>🧩 Paneles SIP</h4>
-                        <p><em>Un sándwich de obra donde el "pan" es madera OSB y el "jamón" es telgopor de alta densidad.</em> Soportan enormes cargas y aíslan del frío en un solo paso prefabricado.</p>
+                        <h4>🧩 Paneles SIP (Structural Insulated Panels)</h4>
+                        <p>Son Paneles Estructurales Aislantes prefabricados. Funcionan bajo el principio estructural de un sándwich: un núcleo grueso de espuma rígida (generalmente Poliestireno Expandido o EPS de alta densidad) fuertemente adherido con poliuretano entre dos tableros estructurales (comúnmente madera OSB). Al actuar en conjunto, soportan enormes cargas axiales y de flexión, resolviendo la estructura portante y la aislación térmica en un único paso de montaje.</p>
                     </div>
                 </div>
 
@@ -73,61 +128,85 @@
                     <img src="https://images.pexels.com/photos/1750566/pexels-photo-1750566.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Alma Llena">
                     <div class="card-content">
                         <h4>🏭 Alma llena (Acero pesado)</h4>
-                        <p>Vigas de acero laminado inmensas. <em>Los pesos pesados de la construcción. Cuando necesitas armar un galpón donde entre un avión, llamas a estos muchachos.</em></p>
+                        <p>A diferencia del Steel Framing que usa chapa plegada liviana, el sistema de alma llena utiliza perfiles laminados en caliente (como los clásicos perfiles doble T, IPE o W). Estas vigas y columnas macizas se unen mediante soldaduras de alta penetración o bulones estructurales. Se reserva para obras que requieren cubrir grandes luces sin columnas intermedias, como naves industriales, centros comerciales o estadios. Su montaje requiere obligatoriamente maquinaria pesada (grúas).</p>
                     </div>
                 </div>
             </div>
 
-            <h3 style="margin-top: 4rem;">🧱 Sistemas no estructurales (División interior)</h3>
-            <p><strong>Atención:</strong> Estos sistemas <strong>solo dividen ambientes</strong>. No soportan peso superior. Un tabique de yeso jamás debe recibir cargas de un techo.</p>
+            <h3 style="margin-top: 4rem;">🧱 2. Sistemas no estructurales (División interior)</h3>
+            <p><strong>Atención:</strong> Su función es <strong>dividir, distribuir o revestir ambientes interiores</strong>. Se fabrican con perfiles de acero de menor espesor y no tienen capacidad portante. Jamás deben recibir cargas de techos ni usarse como muros exteriores sin un tratamiento especial.</p>
 
             <div class="grid-pilares">
                 <div class="pilar-card sin-padding-top">
                     <img src="https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Drywall">
                     <div class="card-content">
-                        <h4>Drywall (Tabiquería de yeso)</h4>
-                        <p>Estructura súper delgada revestida con placas de yeso. <em>El rey de las divisiones de oficina. ¡Pero ojo! No se te ocurra colgarle una bolsa de boxeo sin reforzarlo antes.</em></p>
+                        <h4>Tabiquería Drywall (Placas de yeso)</h4>
+                        <p>Estructura conformada por soleras y montantes de chapa galvanizada muy delgada (usualmente calibre 0.52mm). Sobre este esqueleto se atornillan placas de roca de yeso (Durlock, Knauf, Placo). Las juntas entre placas se toman con cinta de papel y masilla para lograr una superficie continua y lisa. Permiten alojar en su interior todas las instalaciones eléctricas y sanitarias de manera rápida y limpia, además de incorporar lana de vidrio para aislación acústica entre habitaciones.</p>
+                        <a href="tabiqueria.html" class="btn-leer-mas">Ver unidad completa &rarr;</a>
                     </div>
                 </div>
 
                 <div class="pilar-card sin-padding-top">
                     <img src="https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Cielorraso suspendido">
                     <div class="card-content">
-                        <h4>Cielorrasos suspendidos</h4>
-                        <p>Placas colgadas del techo real. <em>El escondite perfecto y disimulado para todos esos caños, cables y conductos de aire acondicionado que no queremos ver.</em></p>
+                        <h4>Cielorrasos suspendidos y desmontables</h4>
+                        <p>Sistemas horizontales que se cuelgan de la estructura de techo original (losa o techo de chapa) mediante alambres tensores, varillas roscadas y perfiles perimetrales. Existen de junta tomada (lisos como una pared) o desmontables (cuadrículas con placas apoyadas). Cumplen una triple función: estética, acústica y técnica, ya que crean un "pleno" (espacio oculto) por donde circulan los ductos de climatización, bandejas de cables y cañerías de rociadores contra incendios.</p>
                     </div>
                 </div>
             </div>
 
-            <h3 style="margin-top: 4rem;">🛡️ Sistemas de envolvente exterior</h3>
+            <h3 style="margin-top: 4rem;">🛡️ 3. Sistemas de envolvente exterior</h3>
+            <p>Estos sistemas se instalan por el lado exterior de la estructura portante. Su función es ser la "piel" del edificio: deben repeler el agua de lluvia, resistir los impactos, tolerar los rayos UV y mejorar la eficiencia energética de la construcción.</p>
 
             <div class="grid-pilares">
                 <div class="pilar-card sin-padding-top">
                     <img src="https://images.pexels.com/photos/2581598/pexels-photo-2581598.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Fachada ventilada">
                     <div class="card-content">
                         <h4>🌬️ Fachadas ventiladas</h4>
-                        <p>Un revestimiento separado del muro. <em>Literalmente es como ponerle una campera rompevientos a la casa.</em> El aire circula por dentro y el edificio "respira", ahorrando energía.</p>
+                        <p>Es el sistema de cerramiento exterior más eficiente que existe. Consiste en fijar un revestimiento (paneles de aluminio, placas cementicias o porcelanatos) sobre una subestructura, dejando una cámara de aire continua entre el revestimiento y la aislación del muro. Por efecto chimenea, el aire caliente asciende y ventila, evitando que el calor del sol ingrese al edificio en verano y controlando la humedad por condensación en invierno.</p>
                     </div>
                 </div>
 
                 <div class="pilar-card sin-padding-top">
                     <img src="https://images.pexels.com/photos/208816/pexels-photo-208816.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Siding">
                     <div class="card-content">
-                        <h4> Siding exterior</h4>
-                        <p>Tablas superpuestas (de PVC, cemento o madera) atornilladas por fuera. <em>Te da ese típico "look de cabaña", pero está diseñado para soportar tormentas severas.</em></p>
+                        <h4>Siding exterior (Entablillado)</h4>
+                        <p>Consiste en la colocación de tablas o lamas superpuestas horizontalmente. Tradicionalmente hechas de madera, hoy en día se fabrican principalmente en fibrocemento (que imita la veta de la madera pero no se pudre ni se quema) o en PVC extruido. Se atornillan sobre los perfiles estructurales exteriores, siempre con una barrera de agua y viento (tipo Tyvek) por detrás. Ofrecen una estética clásica con un mantenimiento casi nulo.</p>
                     </div>
                 </div>
             </div>
 
-            <h3 style="margin-top: 4rem;">📦 Sistemas industrializados y construcción modular</h3>
-            <p>Es el nivel máximo del sistema en seco. En lugar de llevar perfiles a la obra, se construyen las habitaciones enteras (volúmenes 3D) en un galpón o fábrica.</p>
+            <h3 style="margin-top: 4rem;">📦 4. Sistemas industrializados y construcción modular</h3>
+            <p>Es el nivel máximo de eficiencia en la construcción en seco. Traslada los procesos típicos de una obra a una línea de ensamblaje industrial controlada.</p>
 
-            <div class="pilar-card sin-padding-top" style="max-width: 100%; margin-top: 1rem;">
-                <img src="https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=850" class="card-img" alt="Casa modular" style="height: 300px;">
-                <div class="card-content">
-                    <h4>Módulos 3D de fábrica</h4>
-                    <p><em>Es, literalmente, encargar una casa por catálogo.</em> Los módulos viajan terminados (¡hasta con los azulejos del baño pegados!) en la caja de un camión. Llega una grúa inmensa, los levanta, los apoya sobre los cimientos como si fueran bloques de Lego gigantes, y en menos de una semana la obra está terminada.</p>
+            <div class="intro-box" style="border-left-color: var(--primary); background-color: #fff; padding: 0; overflow: hidden;">
+                <iframe width="100%" height="450" src="https://www.youtube-nocookie.com/embed/l-wR75eeAoI" title="
+¿Conoces la construcción modular?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-bottom: 4px solid var(--accent);"></iframe>
+                <div style="padding: 2rem;">
+                    <h4>Módulos 3D de fábrica (Volumétricos)</h4>
+                    <p>En este sistema, el edificio se subdivide en grandes "bloques" tridimensionales. Estos módulos se fabrican por completo dentro de una nave industrial. El proceso incluye el armado de la estructura (acero o madera), la colocación de aislantes, emplacado, pintura, instalación de aberturas, e incluso las terminaciones finas como la colocación de pisos, cerámicas de baño, artefactos sanitarios y grifería.</p>
+                    
+                    <h5 style="margin-top: 1.5rem; color: var(--primary);">Fases del montaje modular:</h5>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem; line-height: 1.8;">
+                        <li><strong>Fabricación concurrente:</strong> Mientras en el terreno se hacen los movimientos de suelo y las fundaciones (zapatas o platea), la casa ya se está construyendo simultáneamente en la fábrica.</li>
+                        <li><strong>Transporte especial:</strong> Los módulos volumétricos se cargan en camiones de plataforma plana ("carretones") y se trasladan al sitio de obra con logística de cargas excepcionales.</li>
+                        <li><strong>Izaje y acople:</strong> Mediante grúas de gran tonelaje, los módulos se elevan y se encastran sobre la fundación y entre sí. Se conectan los suministros troncales (agua, luz, cloacas) y el edificio queda operativo en cuestión de días o semanas, reduciendo los tiempos de obra in situ hasta en un 50%.</li>
+                    </ul>
                 </div>
+            </div>
+
+            <div class="quiz-container">
+                <h3>🧠 Taller interactivo: Pon a prueba tu ojo clínico</h3>
+                <p>Observa la siguiente imagen de una obra en ejecución. Basado en los materiales y el método de unión que ves, ¿a qué sistema general corresponde?</p>
+                
+                <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Muro de ladrillos con mezcla" class="quiz-img">
+                
+                <div>
+                    <button class="btn-quiz" onclick="verificarRespuesta('seca')">Construcción en Seco</button>
+                    <button class="btn-quiz" onclick="verificarRespuesta('humeda')">Construcción Húmeda</button>
+                </div>
+                
+                <p id="quiz-feedback"></p>
             </div>
 
             <footer>
@@ -135,6 +214,20 @@
             </footer>
         </div>
     </main>
+
+    <script>
+        function verificarRespuesta(respuesta) {
+            const feedbackElement = document.getElementById('quiz-feedback');
+            
+            if(respuesta === 'humeda') {
+                feedbackElement.innerHTML = "✅ ¡Correcto! Se observan ladrillos cerámicos u hormigón unidos con mortero (mezcla de cemento, arena y agua). Esto requiere tiempos de fraguado físico-químico.";
+                feedbackElement.className = "correcto";
+            } else {
+                feedbackElement.innerHTML = "❌ Incorrecto. Observa bien las juntas grises entre los mampuestos. Eso es mezcla húmeda, por lo tanto no pertenece a la filosofía de construcción en seco.";
+                feedbackElement.className = "incorrecto";
+            }
+        }
+    </script>
 
 </body>
 </html>
