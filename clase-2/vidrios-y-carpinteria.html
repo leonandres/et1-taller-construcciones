@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2: Vidrios y Carpinterías | ET N°1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <aside>
+        <img src="../img/otto-krause-1.svg" alt="Logo ET N°1" class="school-logo">
+        
+        <h1>Sistemas Constructivos</h1>
+        <span class="school-name">4° Año - ET N°1</span>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio del Taller</a></li>
+                <li><a href="../clase-1/clase1.html">Clase 1: Seg. e Higiene</a></li>
+                <li><a href="../clase-2/vidrios-y-carpinteria.html">Clase 2: Vidrios y Carpinterías</a></li>
+                <li><a href="../clase-3/clase3.html">Clase 3: Pieles de Vidrio</a></li>
+                <li><a href="../clase-4/clase4.html">Clase 4: Pinturas</a></li>
+                
+                <li class="has-submenu" id="sistemas-menu">
+                    <a href="../clase-5/sistemas.html" onclick="toggleSubmenu(event)">Clase 5: Construcción en Seco</a>
+                    <ul class="submenu">
+                        <li><a href="../clase-5/historia.html">Historia y Evolución</a></li>
+                        <li><a href="../clase-5/tabiqueria.html">Tabiquería y Placas</a></li>
+                        <li><a href="../clase-5/ventajas.html">Ventajas y Análisis</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../clase-6/steel-framing.html">Clase 6: Steel Framing</a></li>
+                <li><a href="../clase-7/clase7.html">Clase 7: Revestimientos</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="container">
+            <span class="badge">Unidad temática 2</span>
+            <h2>Vidrios y Carpinterías</h2>
+            
+            <img src="https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=850" alt="Carpintería moderna con gran superficie vidriada" class="hero-image">
+
+            <div class="intro-box">
+                <p><strong>El vano no es solo un "agujero en la pared".</strong> Es el vacío estratégico en la arquitectura. Definimos al vano como un hueco en el muro o cubierta destinado (o no) para colocar una carpintería.</p>
+                <p>Su función es doble: <strong>Conexión</strong> (establece un puente visual ininterrumpido entre los locales y el entorno exterior) y <strong>Habitabilidad</strong> (es el canal primario para iluminar y ventilar los espacios de manera natural).</p>
+            </div>
+
+            <h3>🛠️ Evolución material del cerramiento</h3>
+            <p>La carpintería es el dispositivo de cierre y control. A lo largo de la historia, los materiales elegidos para conformar los marcos han evolucionado buscando maximizar la luz y el confort:</p>
+
+            <div class="grid-pilares">
+                <div class="pilar-card">
+                    <h4 style="color: var(--primary);">🪵 Madera</h4>
+                    <p><strong>Era:</strong> Uso tradicional durante siglos.<br>
+                    <strong>Características:</strong> Ofrece una calidez estética inigualable y robustez clásica. Al ser un aislante natural, evita la transferencia térmica, aunque requiere mantenimiento constante ante las inclemencias del clima.</p>
+                </div>
+                
+                <div class="pilar-card">
+                    <h4 style="color: var(--primary);">⚙️ Acero</h4>
+                    <p><strong>Era:</strong> Racionalismo del Siglo XX.<br>
+                    <strong>Características:</strong> Permitió crear marcos extremadamente delgados pero altamente resistentes. Su principal problema es la oxidación y que transfiere el frío y el calor con mucha facilidad.</p>
+                </div>
+                
+                <div class="pilar-card" style="grid-column: span 2;">
+                    <h4 style="color: var(--accent);">🏗️ Aluminio y PVC</h4>
+                    <p><strong>Era:</strong> Actualidad técnica.<br>
+                    <strong>Beneficio clave:</strong> Eficiencia, bajo costo y nulo mantenimiento. Permiten un aumento sustancial de la dimensión de los marcos, maximizando la transparencia del vidrio y sumando prestaciones avanzadas de seguridad y ruptura de puente térmico.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 4rem;">🧩 Anatomía estructural y Glosario</h3>
+            <p>Para hablar con propiedad en el taller y en la obra, es fundamental conocer los macro componentes operativos y los términos perimetrales de sujeción:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Definición técnica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Premarco</strong></td>
+                        <td>El elemento base amurado a la pared sobre el cual se ubica e instala el marco definitivo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Marco (Cerco)</strong></td>
+                        <td>La parte fija de la estructura que da soporte general y va sujeta al premarco o muro.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hoja</strong></td>
+                        <td>La parte móvil que contiene el vidrio y se cuelga (o desliza) sobre el cerco. </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dintel</strong></td>
+                        <td>El remate superior horizontal del vano y de la carpintería.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jamba</strong></td>
+                        <td>Los brazos o paramentos laterales verticales del cerramiento.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alféizar</strong></td>
+                        <td>Protege la base inferior del muro; presenta pendiente hacia el exterior para la salida de agua.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Botaguas</strong></td>
+                        <td>Elemento en el pie de la hoja que desplaza el agua de lluvia hacia afuera del muro.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 4rem;">🌡️ Matriz diagnóstica de aislación y confort</h3>
+            <p>La temperatura interior depende fuertemente del aporte solar directo y las horas de soleamiento. Además de los marcos, el cristal elegido es el responsable directo de la gestión ambiental:</p>
+
+            <div style="background: white; border-radius: 8px; padding: 2rem; border: 1px solid #ddd; margin-top: 1.5rem;">
+                <ul style="line-height: 1.8; font-size: 1.05rem; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 1rem;">💧 <strong>Aislación Hidrófuga (Agua):</strong> Se logra mediante un vidrio adecuado, sellado perimetral estricto e instalación de botaguas. Además, los perfiles modernos cuentan con <em>canalillos</em> para recoger agua residual y <em>desagües</em> para permitir su salida.</li>
+                    
+                    <li style="margin-bottom: 1rem;">🔥 <strong>Aislación Térmica (Calor/Frío):</strong> Se gestiona mediante vidrios coloreados, cristales reflectantes, o el fundamental <strong>D.V.H. (Doble Vidriado Hermético)</strong>, que aumenta la eficiencia mediante la acumulación de rayos infrarrojos en la cámara de aire estanca.</li>
+                    
+                    <li>🔊 <strong>Aislación Acústica (Ruido):</strong> "El ruido entra por donde entra el aire". La vulnerabilidad acústica se combate combinando D.V.H. con diferentes espesores de vidrio, burletes especiales y rellenos anti-vibratorios.</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 4rem;">🧠 Evaluaciones Rápidas del Taller</h3>
+
+            <div class="quiz-container" style="margin-top: 1.5rem;">
+                <p><strong>1. Morfología:</strong> Imagina que estás revisando los planos de una ventana expuesta a lluvias constantes. ¿Cuál es el componente del muro que obligatoriamente <strong>debe tener pendiente hacia el exterior</strong> para expulsar el agua?</p>
+                <div style="margin-top: 1rem;">
+                    <button class="btn-quiz" onclick="verificarQ1('alf')">El Alféizar</button>
+                    <button class="btn-quiz" onclick="verificarQ1('din')">El Dintel</button>
+                    <button class="btn-quiz" onclick="verificarQ1('jam')">La Jamba</button>
+                </div>
+                <p id="fb-q1" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+            </div>
+
+            <div class="quiz-container" style="margin-top: 1.5rem;">
+                <p><strong>2. Materialidad:</strong> En el Siglo XX se comenzaron a utilizar marcos que permitían secciones muy delgadas y gran resistencia, pero que tenían el defecto de transferir la temperatura y oxidarse. ¿De qué material hablamos?</p>
+                <div style="margin-top: 1rem;">
+                    <button class="btn-quiz" onclick="verificarQ2('madera')">Madera</button>
+                    <button class="btn-quiz" onclick="verificarQ2('acero')">Acero</button>
+                    <button class="btn-quiz" onclick="verificarQ2('pvc')">PVC o Aluminio</button>
+                </div>
+                <p id="fb-q2" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+            </div>
+
+            <div class="quiz-container" style="margin-top: 1.5rem;">
+                <p><strong>3. Confort:</strong> Para lograr la mejor aislación térmica y acústica en un edificio ubicado frente a una avenida muy transitada, el cristal obligatorio a cotizar debe ser...</p>
+                <div style="margin-top: 1rem;">
+                    <button class="btn-quiz" onclick="verificarQ3('float')">Vidrio Float Simple</button>
+                    <button class="btn-quiz" onclick="verificarQ3('dvh')">Sistema D.V.H.</button>
+                    <button class="btn-quiz" onclick="verificarQ3('reflectivo')">Vidrio Reflectivo</button>
+                </div>
+                <p id="fb-q3" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+            </div>
+
+            <div class="recursos-box">
+                <h3>📚 Material Complementario</h3>
+                <ul>
+                    <li><a href="#" target="_blank">📄 Presentación: Anatomía de Vanos y Carpinterías (PDF)</a></li>
+                    <li><a href="#" target="_blank">🎥 Video: Cómo funciona el sistema D.V.H. por dentro</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                © 2026 - Taller de Sistemas Constructivos 4° - ET N°1
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        function verificarQ1(respuesta) {
+            const fb = document.getElementById('fb-q1');
+            if(respuesta === 'alf') {
+                fb.innerHTML = "✅ ¡Correcto! El alféizar necesita pendiente para expulsar el agua recogida.";
+                fb.className = "correcto";
+            } else if (respuesta === 'din') {
+                fb.innerHTML = "❌ Incorrecto. El dintel es el remate SUPERIOR del vano.";
+                fb.className = "incorrecto";
+            } else {
+                fb.innerHTML = "❌ Incorrecto. La jamba se refiere a los brazos LATERALES.";
+                fb.className = "incorrecto";
+            }
+        }
+
+        function verificarQ2(respuesta) {
+            const fb = document.getElementById('fb-q2');
+            if(respuesta === 'acero') {
+                fb.innerHTML = "✅ ¡Correcto! El acero permitió mucha esbeltez pero falla como puente térmico y se oxida.";
+                fb.className = "correcto";
+            } else {
+                fb.innerHTML = "❌ Incorrecto. Revisa la sección de 'Evolución material'.";
+                fb.className = "incorrecto";
+            }
+        }
+
+        function verificarQ3(respuesta) {
+            const fb = document.getElementById('fb-q3');
+            if(respuesta === 'dvh') {
+                fb.innerHTML = "✅ ¡Exacto! El Doble Vidriado Hermético (D.V.H.) provee una cámara de aire estanca, clave para aislar ruido y temperatura.";
+                fb.className = "correcto";
+            } else {
+                fb.innerHTML = "❌ Incorrecto. Ese cristal por sí solo no aporta suficiente aislamiento.";
+                fb.className = "incorrecto";
+            }
+        }
+
+        function toggleSubmenu(event) {
+            event.preventDefault();
+            const menuItem = document.getElementById('sistemas-menu');
+            menuItem.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

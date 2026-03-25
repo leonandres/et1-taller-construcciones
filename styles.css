@@ -1,18 +1,14 @@
 /* Variables y configuración base */
 :root {
-    --primary: #1a2a3a; /* Azul oscuro institucional */
-    --accent: #e67e22;  /* Naranja industrial/técnico */
+    --primary: #1a2a3a;
+    --accent: #e67e22;
     --bg: #f4f7f9;
     --text: #2c3e50;
     --white: #ffffff;
     --border: #d1d8e0;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: 'Inter', sans-serif;
@@ -22,7 +18,7 @@ body {
     display: flex;
 }
 
-/* --- Barra lateral (sidebar) --- */
+/* ===== BARRA LATERAL (SIDEBAR) ===== */
 aside {
     width: 280px;
     background-color: var(--primary);
@@ -36,413 +32,173 @@ aside {
     border-right: 4px solid var(--accent);
 }
 
-aside h1 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
+.school-logo {
+    width: 85%;
+    max-width: 160px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    background-color: #ffffff; /* Fondo blanco para que resalte el SVG */
+    padding: 12px;
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
 }
 
+aside h1 { font-size: 1.3rem; margin-bottom: 0.2rem; line-height: 1.2; }
 aside .school-name {
     color: var(--accent);
     font-weight: 700;
     font-size: 1.1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     display: block;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    margin-bottom: 0.8rem;
-}
+/* ===== NAVEGACIÓN ===== */
+nav ul { list-style: none; padding: 0; margin: 0; }
+nav > ul > li { margin-bottom: 0.5rem; position: relative; }
 
 nav a {
     color: #a4b0be;
     text-decoration: none;
-    font-size: 0.9rem;
-    display: block;
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
     border-radius: 6px;
     transition: all 0.3s ease;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: white;
-}
-
-nav a.active {
-    background-color: var(--accent);
-    color: white;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    font-size: 0.90rem;
+    letter-spacing: 0.3px;
 }
 
-/* --- Contenido principal --- */
-main {
-    margin-left: 280px;
-    padding: 4rem;
-    width: 100%;
-}
+nav a:hover { background-color: rgba(255, 255, 255, 0.05); color: white; }
+/* Botón activo principal (Naranja) */
+nav a.active { background-color: var(--accent); color: white; font-weight: 700; }
 
-.container {
-    max-width: 850px;
-    margin: 0 auto;
-}
+/* Flecha del submenú */
+nav li.has-submenu > a::after { content: "▼"; font-size: 0.7rem; transition: transform 0.3s ease; }
+nav li.has-submenu.open > a::after { transform: rotate(180deg); }
 
-.badge {
-    background-color: #34495e;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    display: inline-block;
-    letter-spacing: 1px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif; /* Nueva fuente para títulos */
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 2rem;
-    line-height: 1.2;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-/* Agrego una barra lateral decorativa al título principal */
-h2::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 6px;
-    background-color: var(--accent);
-    border-radius: 3px;
-}
-
-h3 {
-    font-size: 1.8rem;
-    color: var(--primary);
-    margin: 2.5rem 0 1rem 0;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 0.5rem;
-}
-
-p {
-    margin-bottom: 1.2rem;
-    font-size: 1.05rem;
-}
-
-.hero-image {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    margin-bottom: 2.5rem;
-    border-bottom: 5px solid var(--accent);
-}
-
-.intro-box {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 8px;
-    border-left: 6px solid var(--accent);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin-bottom: 2.5rem;
-}
-
-.intro-box p:last-child {
-    margin-bottom: 0;
-}
-
-.highlight {
-    color: var(--accent);
-    font-weight: 700;
-}
-
-/* --- Tabla de comparación con divs (CSS Grid) --- */
-.table-section {
-    margin: 3rem 0;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.grid-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-bottom: 1px solid var(--border);
-}
-
-.grid-row:last-child {
-    border-bottom: none;
-}
-
-.header-row {
-    background-color: var(--primary);
-    color: white;
-    font-weight: 600;
-}
-
-.grid-item {
-    padding: 1.2rem;
-    font-size: 1rem;
-}
-
-/* --- Cuadrícula de pilares --- */
-.grid-pilares {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.pilar-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    border-top: 4px solid var(--accent);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.pilar-card:hover {
-    transform: translateY(-5px);
-}
-
-.pilar-card h4 {
-    margin-bottom: 1rem;
-    color: var(--primary);
-    font-size: 1.2rem;
-}
-
-.pilar-card p {
-    font-size: 0.95rem;
-    margin-bottom: 0;
-    color: #576574;
-}
-
-footer {
-    margin-top: 5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    font-size: 0.9rem;
-    color: #7f8c8d;
-    font-weight: 600;
-}
-
-/* --- Responsivo --- */
-@media (max-width: 900px) {
-    aside { width: 0; display: none; }
-    main { margin-left: 0; padding: 2rem; }
-    .grid-pilares { grid-template-columns: 1fr; }
-    
-    /* Adaptar la tabla div a pantallas pequeñas */
-    .grid-row {
-        grid-template-columns: 1fr;
-        border-bottom: 3px solid var(--border);
-    }
-    .header-row {
-        display: none; /* Ocultamos la cabecera en móviles para apilar la info */
-    }
-    .grid-item {
-        border-bottom: 1px solid #eee;
-    }
-    .grid-item:first-child {
-        background-color: var(--primary);
-        color: white;
-        font-weight: bold;
-    }
-}
-
-/*Historia*/
-
-/* --- Línea de tiempo (Timeline) --- */
-.timeline {
-    position: relative;
-    max-width: 100%;
-    margin: 2rem 0;
-    padding-left: 2rem;
-    border-left: 3px solid var(--border);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 2.5rem;
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-/* El punto en la línea de tiempo */
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -2.65rem; /* Ajuste para centrar sobre la línea del borde */
-    top: 0;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--accent);
-    border: 3px solid var(--white);
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px var(--border);
-}
-
-.timeline-year {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 0.3rem;
-    letter-spacing: 1px;
-}
-
-.timeline-content {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-    border: 1px solid var(--border);
-}
-
-.timeline-content h4 {
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-    font-size: 1.15rem;
-}
-
-.timeline-content p {
-    font-size: 0.95rem;
-    margin-bottom: 0;
-    color: #576574;
-}
-
-/* Estilos para las nuevas tarjetas con imágenes */
-.sin-padding-top {
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 4px solid var(--accent);
-}
-
-.card-content {
-    padding: 1.5rem;
-}
-
-/* Botones de "Leer más" en las tarjetas */
-.btn-leer-mas {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.btn-leer-mas:hover {
-    color: var(--primary);
-    text-decoration: underline;
-}
-
-/* ===== ESTILOS PARA EL MENÚ CON SUBLISTA ===== */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    position: relative;
-}
-
-/* Estilo para el ítem que tiene submenú */
-nav li.has-submenu > a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav li.has-submenu > a::after {
-    content: "▼";
-    font-size: 0.7rem;
-    transition: transform 0.3s ease;
-}
-
-/* Cuando el submenú está abierto, la flecha apunta hacia arriba */
-nav li.has-submenu.open > a::after {
-    transform: rotate(180deg);
-}
-
-/* Submenú oculto por defecto */
+/* Contenedor del submenú */
 nav .submenu {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0 0 8px 8px;
-    margin-top: 0;
-    padding-left: 1.2rem;
 }
-
-/* Estilos tipográficos para el menú lateral */
-aside nav ul li a {
-    font-family: 'Montserrat', sans-serif; /* Aplicamos la fuente Montserrat */
-    font-weight: 600;                      /* Grosor semibold para que resalte */
-    font-size: 0.95rem;                    /* Ajuste fino del tamaño */
-    letter-spacing: 0.3px;                 /* Separación sutil entre letras */
-    text-transform: uppercase;             /* Opcional: mayúsculas para un look más técnico */
-}
-
-/* Tipografía específica para los submenús (para diferenciarlos del menú principal) */
-aside nav .submenu li a {
-    font-family: 'Inter', sans-serif;      /* Volvemos a Inter para los sub-items */
-    font-weight: 400;                      /* Letra más fina */
-    text-transform: none;                  /* Sin mayúsculas */
-    font-size: 0.85rem;                    /* Un poco más pequeña */
-}
-
-/* Submenú visible cuando la clase "open" está presente */
 nav li.has-submenu.open .submenu {
     max-height: 300px;
-    transition: max-height 0.4s ease-in;
+    padding: 0.5rem 0;
 }
 
-nav .submenu li {
-    margin: 0;
-}
-
+/* Ítems del submenú */
+nav .submenu li { margin: 0; }
 nav .submenu li a {
+    font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
-    padding: 0.5rem 0 0.5rem 1rem;
     font-weight: 400;
-    border-left: 2px solid transparent;
-    transition: all 0.2s ease;
+    padding: 0.6rem 1rem 0.6rem 2.2rem; /* Espacio para el punto */
+    background: transparent;
+    border-radius: 0;
+    color: #a4b0be;
+    position: relative;
+}
+nav .submenu li a::after { display: none; } /* Ocultar flecha aquí */
+
+/* Punto decorativo inicial */
+nav .submenu li a::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #a4b0be;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-nav .submenu li a:hover {
-    border-left-color: var(--accent);
-    background-color: rgba(255, 255, 255, 0.1);
-    padding-left: 1.2rem;
+/* Al pasar el mouse o estar activo en el submenú */
+nav .submenu li a:hover, nav .submenu li a.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05); /* Leve resaltado */
+    font-weight: 600;
 }
+/* El punto se transforma en barra naranja */
+nav .submenu li a:hover::before, nav .submenu li a.active::before {
+    background-color: var(--accent);
+    border-radius: 3px;
+    height: 60%;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main { margin-left: 280px; padding: 4rem; width: 100%; }
+.container { max-width: 850px; margin: 0 auto; }
+.badge { background-color: #34495e; color: white; padding: 5px 15px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; letter-spacing: 1px; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 2rem; line-height: 1.2; position: relative; padding-left: 1.5rem; }
+h2::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 6px; background-color: var(--accent); border-radius: 3px; }
+h3 { font-size: 1.8rem; color: var(--primary); margin: 2.5rem 0 1rem 0; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+
+.hero-image { width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); margin-bottom: 2.5rem; border-bottom: 5px solid var(--accent); }
+.intro-box { background: white; padding: 2.5rem; border-radius: 8px; border-left: 6px solid var(--accent); box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 2.5rem; }
+.highlight { color: var(--accent); font-weight: 700; }
+
+/* Dashboard Index */
+.dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.clase-card { background: white; border: 1px solid #e1e8ed; border-radius: 10px; padding: 1.5rem; text-decoration: none; color: inherit; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
+.clase-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.05); border-color: var(--primary); }
+.clase-num { font-family: 'Montserrat', sans-serif; color: var(--accent); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+.clase-title { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text); }
+.clase-desc { font-size: 0.9rem; color: #666; margin-bottom: 1rem; flex-grow: 1; }
+.clase-icon { font-size: 2rem; margin-bottom: 1rem; }
+.hero-home { background: linear-gradient(135deg, var(--primary) 0%, #1a365d 100%); color: white; padding: 3rem 2rem; border-radius: 12px; margin-bottom: 2rem; }
+.hero-home h2 { color: white; margin-top: 0; font-size: 2.2rem; }
+
+/* Tarjetas y Grid */
+.grid-pilares { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.pilar-card { background: white; padding: 2rem; border-radius: 8px; border-top: 4px solid var(--accent); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+.pilar-card:hover { transform: translateY(-5px); }
+.pilar-card h4 { margin-bottom: 1rem; color: var(--primary); font-size: 1.2rem; }
+.sin-padding-top { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.card-img { width: 100%; height: 180px; object-fit: cover; border-bottom: 4px solid var(--accent); }
+.card-content { padding: 1.5rem; }
+.btn-leer-mas { display: inline-block; margin-top: 1rem; color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
+.btn-leer-mas:hover { color: var(--primary); text-decoration: underline; }
+
+/* Línea de tiempo (Timeline) */
+.timeline { position: relative; max-width: 100%; margin: 2rem 0; padding-left: 2rem; border-left: 3px solid var(--border); }
+.timeline-item { position: relative; margin-bottom: 2.5rem; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item::before { content: ''; position: absolute; left: -2.65rem; top: 0; width: 1rem; height: 1rem; background-color: var(--accent); border: 3px solid var(--white); border-radius: 50%; box-shadow: 0 0 0 2px var(--border); }
+.timeline-year { font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; letter-spacing: 1px; }
+.timeline-content { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid var(--border); }
+.timeline-content h4 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.15rem; }
+
+/* Quiz Interactivo */
+.quiz-container { background: #fff; border: 2px dashed var(--primary); border-radius: 8px; padding: 2rem; margin-top: 3rem; text-align: center; }
+.quiz-img { width: 100%; max-width: 400px; border-radius: 8px; margin-bottom: 1rem; }
+.btn-quiz { background-color: var(--primary); color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; transition: background-color 0.3s; }
+.btn-quiz:hover { background-color: var(--accent); }
+#quiz-feedback { margin-top: 15px; font-weight: bold; font-size: 1.1rem; min-height: 24px; }
+.correcto { color: #27ae60; }
+.incorrecto { color: #e74c3c; }
+
+/* Recursos y Tablas */
+.recursos-box { background-color: #e8f4fd; border-left: 5px solid var(--primary); padding: 1.5rem 2rem; border-radius: 0 8px 8px 0; margin-top: 3rem; }
+.recursos-box h3 { color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 10px; }
+.recursos-box ul { list-style: none; padding: 0; margin: 0; }
+.recursos-box li { margin-bottom: 0.8rem; }
+.recursos-box a { color: var(--text); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
+.recursos-box a:hover { color: var(--accent); text-decoration: underline; }
+.tech-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; }
+.tech-table th { background-color: var(--primary); color: white; padding: 1rem; text-align: left; }
+.tech-table td { padding: 1rem; border-bottom: 1px solid #d1d8e0; }
+.tech-table tr:last-child td { border-bottom: none; }
+
+footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; font-size: 0.9rem; color: #7f8c8d; font-weight: 600; }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6: Steel Framing | 4TO Año | ET N°1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <aside>
+        <img src="../img/otto-krause-1.svg" alt="Logo ET N°1 Otto Krause" class="school-logo">
+        
+        <h1>Sistemas Constructivos</h1>
+        <span class="school-name">4° Año - ET N°1</span>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio del Taller</a></li>
+                <li><a href="../clase-1/clase1.html">Clase 1: Seg. e Higiene</a></li>
+                <li><a href="../clase-2/vidrios-y-carpinteria.html">Clase 2: Vidrios y Carpinterías</a></li>
+                <li><a href="../clase-3/clase3.html">Clase 3: Pieles de Vidrio</a></li>
+                <li><a href="../clase-4/clase4.html">Clase 4: Pinturas</a></li>
+                
+                <li class="has-submenu" id="sistemas-menu">
+                    <a href="../clase-5/sistemas.html" onclick="toggleSubmenu(event)">Clase 5: Construcción en Seco</a>
+                    <ul class="submenu">
+                        <li><a href="../clase-5/historia.html">Historia y Evolución</a></li>
+                        <li><a href="../clase-5/tabiqueria.html">Tabiquería y Placas</a></li>
+                        <li><a href="../clase-5/ventajas.html">Ventajas y Análisis</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="steel-framing.html" class="active">Clase 6: Steel Framing</a></li>
+                <li><a href="../clase-7/clase7.html">Clase 7: Revestimientos</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="container">
+            <span class="badge">Unidad temática 6</span>
+            <h2>Ingeniería del Steel Framing</h2>
+            
+            <p><strong>¿Qué es el Steel Framing?</strong> El Steel Framing (del inglés <em>steel</em> = acero, y <em>framing</em> = entramado o esqueleto) es un sistema constructivo industrializado en seco basado en el montaje de un esqueleto estructural. Este esqueleto está compuesto por una gran cantidad de elementos lineales (perfiles de acero galvanizado conformado en frío) que, al unirse milimétricamente entre sí mediante tornillos, actúan en conjunto para soportar el peso propio del edificio y las cargas climáticas (viento o nieve).</p>
+
+            <img src="../img/1 - construccion-en-seco-ejemplo-1.jpg" alt="Estructura completa de perfiles de Steel Framing" class="hero-image" style="margin-top: 1.5rem; height: 350px;">
+
+            <div class="intro-box">
+                <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif;">⚠️ Concepto Clave: No lo confundas con el Drywall</h4>
+                <p style="margin-bottom: 0;">Es un error común creer que el Steel Framing es lo mismo que armar una pared de yeso interior (Durlock/Drywall). Mientras que la tabiquería interior usa perfiles de chapa muy delgada (0.5 mm) que <strong>solo sirven para dividir ambientes</strong>, el Steel Framing utiliza acero estructural grueso (mínimo 0.9 mm) capaz de <strong>soportar el peso de un techo o una segunda planta.</strong></p>
+            </div>
+
+            <p>El principio físico del sistema se basa en la "distribución de cargas". A diferencia de la construcción pesada de hormigón (que concentra el peso en unas pocas columnas muy gruesas), el Steel Framing reparte el peso de la cubierta a lo largo de toda la pared a través de una gran cantidad de "mini columnas" (montantes) separadas a distancias regulares, generalmente cada 40 cm o 60 cm.</p>
+
+            <p>Esta modulación estricta no es casual. La separación entre perfiles está calculada para que coincida exactamente con las dimensiones estándar de las placas de revestimiento (OSB y Yeso), evitando el desperdicio de material y garantizando que siempre haya un perfil donde atornillar los bordes de cada placa.</p>
+
+            <p>Al ser un sistema liviano, las fundaciones requeridas son mucho menos profundas y costosas que las de una obra húmeda. Generalmente se apoya sobre una platea de hormigón armado, a la cual el esqueleto de acero se ancla químicamente o mediante pernos de expansión para evitar que la estructura se levante por la succión del viento.</p>
+
+            <img src="../img/6-7 - base-steel-framing.jpg" alt="Detalle de perfiles y uniones" style="width: 100%; border-radius: 8px; margin: 2rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+
+            <h3 style="margin-top: 3rem;">📏 1. La anatomía de los perfiles estructurales</h3>
+            <p>El alma de este sistema son los perfiles conformados en frío. Para transformar una simple bobina de chapa lisa en un elemento estructural rígido, la industria siderúrgica pliega la chapa longitudinalmente dándole formas geométricas específicas que aumentan drásticamente su resistencia a la flexión y compresión.</p>
+
+            <div class="grid-pilares" style="margin-top: 1.5rem;">
+                <div class="pilar-card">
+                    <h4 style="color: var(--primary); font-size: 1.3rem;">PGC (Perfil Galvanizado C)</h4>
+                    <p><strong>Función:</strong> Montante (Vertical) o Viga (Horizontal).</p>
+                    <p>Tiene forma de letra "C". Sus bordes están doblados hacia adentro (lo que se conoce como pestañas o atiesadores). Este doblez evita que el perfil se tuerza sobre su propio eje. <strong>Es el perfil que recibe y transmite las cargas hacia el suelo.</strong></p>
+                </div>
+                
+                <div class="pilar-card">
+                    <h4 style="color: var(--accent); font-size: 1.3rem;">PGU (Perfil Galvanizado U)</h4>
+                    <p><strong>Función:</strong> Solera o Perfil guía.</p>
+                    <p>Tiene forma de letra "U" (no tiene pestañas). <strong>NO soporta peso por sí solo.</strong> Su única función es ir apoyado en el piso o techo sirviendo de "carril" o encofrado donde los perfiles PGC van a encastrar y fijarse.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 4rem;">🔩 2. El arte de unir el acero (Fijaciones mecánicas)</h3>
+            <p>En la mampostería usamos mortero; en el Steel Framing usamos tornillos calculados por ingenieros. Cada tornillo tiene un límite a la fuerza de "corte" y "arrancamiento". Usar un tornillo equivocado no solo está mal, sino que es un riesgo de colapso.</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Elemento a unir</th>
+                        <th>Tipo de fijación requerida</th>
+                        <th>Criterio técnico de uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>PGC con PGU</strong><br>(Metal estructural con Metal)</td>
+                        <td>Tornillo Hexagonal Punta Mecha (T1 / T10)</td>
+                        <td>Al tener cabeza hexagonal, se instala con una boquilla magnética. Permite aplicar muchísimo torque (fuerza de giro) sin que el taladro resbale, perforando acero de hasta 2 mm.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Placa OSB a PGC</strong><br>(Madera con Metal)</td>
+                        <td>Tornillo Punta Mecha con Alas Fresadoras (T3)</td>
+                        <td>Posee pequeñas "alas" en la punta que abren un surco amplio en la madera. Esas alas se rompen al tocar el acero. Esto asegura que la madera no se empuje hacia afuera ("efecto gato") al atornillar.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Muro al Cimiento</strong><br>(Estructura a Platea de Hormigón)</td>
+                        <td>Anclaje Químico o Perno de Expansión Térmica</td>
+                        <td>Sujeción crítica inferior. Evita el "arrancamiento" vertical (que la casa vuele con un temporal) y el "deslizamiento" lateral.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 4rem;">🥪 3. La envolvente: El muro multicapa</h3>
+            <p>Un muro tradicional de ladrillo confía en su "masa" (su gran espesor y peso) para intentar frenar el frío, el calor y el agua. Lamentablemente, es muy poco eficiente. El Steel Framing utiliza un enfoque radicalmente distinto y mucho más científico: <strong>la especialización de materiales</strong>.</p>
+            
+            <p>En lugar de pedirle a un solo material que haga todo mal, el sistema multicapa superpone láminas y membranas donde <strong>cada una cumple una única función al 100% de eficacia</strong>. Una capa frena el viento, otra frena el agua, otra aísla el ruido y otra soporta el peso. Esto genera muros muy delgados pero con un rendimiento termodinámico que supera ampliamente a la construcción tradicional.</p>
+            
+            <p>Si hiciéramos un "corte transversal" de afuera hacia adentro en una pared de Steel Framing, veríamos este orden exacto:</p>
+            
+            <div style="background: white; border-radius: 8px; padding: 2.5rem; border: 1px solid var(--border); margin-top: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border-left: 6px solid var(--accent);">
+                <ol style="line-height: 1.9; font-size: 1.05rem; padding-left: 1.2rem;">
+                    <li><strong>Revestimiento Exterior:</strong> La piel estética final del edificio. Puede ser Siding (tablas de fibrocemento símil madera), chapa acanalada, revoque plástico sobre sistema EIFS o incluso ladrillo a la vista.</li>
+                    <li><strong>Placa EPS (Aislación Exterior):</strong> Poliestireno expandido de alta densidad. Envuelve toda la casa por fuera como si fuera un abrigo, cortando el puente térmico de los perfiles de acero.</li>
+                    <li><strong>Barrera Hidrófuga y de Viento:</strong> Membrana inteligente de papel sintético (ej. Tyvek). Bloquea el ingreso de agua de lluvia y ráfagas de viento desde el exterior, pero tiene poros microscópicos que permiten que el vapor interior salga de la pared, dejándola "respirar".</li>
+                    <li><strong>Placa de Rigidización (OSB o Fenólico):</strong> Tablero estructural de virutas de madera prensadas. Es vital porque arriostra (le da rigidez) al conjunto de perfiles, evitando que la casa se incline o deforme con los empujes laterales del viento o sismos.</li>
+                    <li><strong>Estructura Portante:</strong> El esqueleto propiamente dicho (Montantes PGC y Soleras PGU).</li>
+                    <li><strong>Aislación Interna:</strong> Rollo de lana de vidrio, celulosa o lana mineral proyectada. Se aloja dentro del espacio hueco (el alma) que queda entre los perfiles. Su función es térmica y acústica (absorbe el ruido).</li>
+                    <li><strong>Barrera de Vapor:</strong> Un film de nylon grueso colocado del lado caliente del muro (adentro). Impide que la humedad generada por nosotros (al respirar, cocinar o ducharnos) entre al interior de la pared, evitando condensación que podría oxidar el acero o podrir la madera.</li>
+                    <li><strong>Placa de Yeso (Drywall):</strong> La terminación superficial interior. Placas de roca de yeso atornilladas que luego se encintan, masillan y pintan para un acabado perfectamente liso.</li>
+                </ol>
+            </div>
+
+            <div class="recursos-box">
+                <h3>📚 Material Complementario y Descargas</h3>
+                <ul>
+                    <li><a href="#" target="_blank">📄 Manual técnico de perfiles conformados en frío (PDF)</a></li>
+                    <li><a href="#" target="_blank">📄 Catálogo de Tornillos y Anclajes Estructurales (PDF)</a></li>
+                    <li><a href="#" target="_blank">🎥 Animación 3D: Proceso de montaje del Muro Multicapa</a></li>
+                </ul>
+            </div>
+
+            <footer>
+                © 2026 - Material didáctico - Departamento de Construcciones - ET N°1
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        function toggleSubmenu(event) {
+            event.preventDefault();
+            const menuItem = document.getElementById('sistemas-menu');
+            menuItem.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

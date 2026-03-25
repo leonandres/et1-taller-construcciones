@@ -5,28 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Análisis del Sistema | ET N°1</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-    <aside>
-        <h1>Construcción en seco</h1>
-        <span class="school-name">Escuela Técnica N°1</span>
+<aside>
+        <img src="../img/otto-krause-1.svg" alt="Logo ET N°1" class="school-logo">
+        
+        <h1>Sistemas Constructivos</h1>
+        <span class="school-name">4° Año - ET N°1</span>
+        
         <nav>
             <ul>
-                <li><a href="index.html">1. Filosofía del sistema</a></li>
-                <li><a href="historia.html">2. Historia y origen</a></li>
-                <li><a href="sistemas.html">3. Sistemas de construcción</a></li>
-                <li><a href="analisis.html" class="active">4. Ventajas y limitaciones</a></li>
-                <li><a href="guia.html">5. Guía de taller y montaje</a></li>
+                <li><a href="../index.html">Inicio del Taller</a></li>
+                <li><a href="../clase-1/clase1.html">Clase 1: Seg. e Higiene</a></li>
+                <li><a href="../clase-2/vidrios-y-carpinteria.html">Clase 2: Vidrios y Carpinterías</a></li>
+                <li><a href="../clase-3/clase3.html">Clase 3: Pieles de Vidrio</a></li>
+                <li><a href="../clase-4/clase4.html">Clase 4: Pinturas</a></li>
+                
+                <li class="has-submenu" id="sistemas-menu">
+                    <a href="../clase-5/sistemas.html" onclick="toggleSubmenu(event)">Clase 5: Construcción en Seco</a>
+                    <ul class="submenu">
+                        <li><a href="../clase-5/historia.html">Historia y Evolución</a></li>
+                        <li><a href="../clase-5/tabiqueria.html">Tabiquería y Placas</a></li>
+                        <li><a href="../clase-5/ventajas.html">Ventajas y Análisis</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../clase-6/steel-framing.html">Clase 6: Steel Framing</a></li>
+                <li><a href="../clase-7/clase7.html">Clase 7: Revestimientos</a></li>
             </ul>
         </nav>
+        
     </aside>
 
     <main>
         <div class="container">
             <span class="badge">Unidad temática 4</span>
-            <h2>La realidad de la obra: Ventajas y Desventajas</h2>
+            <h2>La realidad de la obra: Ventajas y desventajas</h2>
             
             <img src="https://images.pexels.com/photos/585418/pexels-photo-585418.jpeg?auto=compress&cs=tinysrgb&w=850" 
                  alt="Obra limpia y ordenada de construcción en seco" 

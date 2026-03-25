@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Construcción en Seco | ET N°1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <aside>
+        <img src="../img/otto-krause-1.svg" alt="Logo ET N°1" class="school-logo">
+        
+        <h1>Sistemas Constructivos</h1>
+        <span class="school-name">4° Año - ET N°1</span>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio del Taller</a></li>
+                <li><a href="../clase-1/clase1.html">Clase 1: Seg. e Higiene</a></li>
+                <li><a href="../clase-2/vidrios-y-carpinteria.html">Clase 2: Vidrios y Carpinterías</a></li>
+                <li><a href="../clase-3/clase3.html">Clase 3: Pieles de Vidrio</a></li>
+                <li><a href="../clase-4/clase4.html">Clase 4: Pinturas</a></li>
+                
+                <li class="has-submenu" id="sistemas-menu">
+                    <a href="../clase-5/sistemas.html" onclick="toggleSubmenu(event)">Clase 5: Construcción en Seco</a>
+                    <ul class="submenu">
+                        <li><a href="../clase-5/historia.html">Historia y Evolución</a></li>
+                        <li><a href="../clase-5/tabiqueria.html">Tabiquería y Placas</a></li>
+                        <li><a href="../clase-5/ventajas.html">Ventajas y Análisis</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../clase-6/steel-framing.html">Clase 6: Steel Framing</a></li>
+                <li><a href="../clase-7/clase7.html">Clase 7: Revestimientos</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="container">
+            <span class="badge">Unidad temática 3</span>
+            <h2>Sistemas de construcción en seco</h2>
+            
+            <img src="../img/construccion-en-seco.jpeg" alt="Múltiples sistemas de construcción en seco" class="hero-image">
+
+            <div class="intro-box">
+                <p>El universo de la construcción en seco abarca mucho más que perfiles y placas de yeso. La clave para clasificar estos sistemas es entender su función física y mecánica en la obra. La distinción principal que define cómo se calcula un proyecto es la diferencia entre los <span class="highlight">sistemas estructurales</span> (los que soportan el peso del edificio), los <span class="highlight">sistemas no estructurales</span> (los que dividen espacios), los <span class="highlight">sistemas de envolvente</span> (que protegen del clima) y los <span class="highlight">sistemas modulares</span> (prefabricación total).</p>
+            </div>
+
+            <div style="background-color: #f8f9fa; border: 1px solid #d1d8e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 3rem;">
+                <h4 style="color: var(--primary); margin-bottom: 0.5rem;">📊 El impacto logístico</h4>
+                <p style="font-size: 0.95rem; margin-bottom: 0;">En Argentina, existe un organismo dedicado exclusivamente a estudiar, estandarizar y promover este método constructivo, llamado <strong>Instituto de la Construcción en Seco (INCOSE)</strong>. Este instituto afirma que una vivienda construida con Steel Framing pesa apenas un <strong>10%</strong> en comparación con una obra húmeda tradicional.</p>
+            </div>
+
+            <h3 id="estructurales">🏗️ 1. Sistemas estructurales (El esqueleto portante)</h3>
+            <p><strong>Atención:</strong> Estos sistemas <strong>soportan el peso de la edificación</strong>. Transmiten las cargas gravitatorias y dinámicas hacia las fundaciones. Requieren cálculo de ingeniería civil.</p>
+
+            <div class="grid-pilares">
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/1463917/pexels-photo-1463917.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Steel Framing">
+                    <div class="card-content">
+                        <h4>Steel Framing</h4>
+                        <p>Sistema compuesto por perfiles de chapa de acero galvanizado estructural (calibres de 0.9mm o superiores). Al ser un material inorgánico, no sufre ataques de termitas y es completamente incombustible.</p>
+                        <a href="steel-framing.html" class="btn-leer-mas">Ver unidad completa &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/2209529/pexels-photo-2209529.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Wood Framing">
+                    <div class="card-content">
+                        <h4>Wood Framing</h4>
+                        <p>Entramado de listones de madera aserrada tratada. Las uniones se realizan con clavadoras neumáticas y herrajes de acero. Su ventaja técnica principal es que la madera es un excelente aislante térmico natural.</p>
+                    </div>
+                </div>
+
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Paneles SIP">
+                    <div class="card-content">
+                        <h4>Paneles SIP</h4>
+                        <p>Consisten en un núcleo grueso de espuma rígida (EPS) adherido entre dos tableros estructurales (OSB). Soportan cargas axiales y resuelven la estructura y la aislación en un único paso.</p>
+                    </div>
+                </div>
+
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/1750566/pexels-photo-1750566.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Alma Llena">
+                    <div class="card-content">
+                        <h4>Alma llena (Acero pesado)</h4>
+                        <p>Utiliza perfiles laminados en caliente (perfiles doble T). Se reserva para obras que requieren cubrir grandes luces sin columnas intermedias, como naves industriales o centros comerciales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="no-estructurales" style="margin-top: 4rem;">🧱 2. Sistemas no estructurales (División interior)</h3>
+            <p><strong>Atención:</strong> Su función es <strong>dividir, distribuir o revestir ambientes interiores</strong>. No tienen capacidad portante y jamás deben recibir cargas de techos.</p>
+
+            <div class="grid-pilares">
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Drywall">
+                    <div class="card-content">
+                        <h4>Tabiquería Drywall</h4>
+                        <p>Estructura conformada por soleras y montantes de chapa galvanizada muy delgada. Sobre este esqueleto se atornillan placas de roca de yeso (Durlock, Knauf).</p>
+                    </div>
+                </div>
+
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Cielorraso suspendido">
+                    <div class="card-content">
+                        <h4>Cielorrasos suspendidos</h4>
+                        <p>Sistemas horizontales que se cuelgan de la estructura de techo original. Crean un "pleno" por donde circulan los ductos de climatización y bandejas de cables.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="envolvente" style="margin-top: 4rem;">🛡️ 3. Sistemas de envolvente exterior</h3>
+            <p>Estos sistemas se instalan por el lado exterior de la estructura portante. Su función es ser la "piel" del edificio y mejorar la eficiencia energética.</p>
+
+            <div class="grid-pilares">
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/2581598/pexels-photo-2581598.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Fachada ventilada">
+                    <div class="card-content">
+                        <h4>Fachadas ventiladas</h4>
+                        <p>Consiste en fijar un revestimiento dejando una cámara de aire continua. Por efecto chimenea, el aire caliente asciende y ventila, evitando que el calor del sol ingrese al edificio.</p>
+                    </div>
+                </div>
+
+                <div class="pilar-card sin-padding-top">
+                    <img src="https://images.pexels.com/photos/208816/pexels-photo-208816.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Siding">
+                    <div class="card-content">
+                        <h4>Siding exterior</h4>
+                        <p>Colocación de tablas superpuestas horizontalmente, generalmente de fibrocemento o PVC extruido. Se atornillan sobre los perfiles estructurales exteriores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="modulares" style="margin-top: 4rem;">📦 4. Sistemas industrializados y construcción modular</h3>
+            <p>Es el nivel máximo de eficiencia en la construcción en seco. Traslada los procesos típicos de una obra a una línea de ensamblaje industrial controlada.</p>
+
+            <div class="intro-box" style="border-left-color: var(--primary); background-color: #fff; padding: 0; overflow: hidden;">
+                <iframe width="100%" height="450" src="https://www.youtube-nocookie.com/embed/l-wR75eeAoI" title="¿Conoces la construcción modular?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-bottom: 4px solid var(--accent);"></iframe>
+                <div style="padding: 2rem;">
+                    <h4>Módulos 3D de fábrica (Volumétricos)</h4>
+                    <p>El edificio se subdivide en grandes bloques tridimensionales fabricados dentro de una nave industrial, reduciendo los tiempos de obra in situ hasta en un 50%.</p>
+                </div>
+            </div>
+
+            <div class="quiz-container">
+                <h3>🧠 Taller interactivo: Pon a prueba tu ojo clínico</h3>
+                <p>Observa la siguiente imagen de una obra en ejecución. Basado en los materiales y el método de unión que ves, ¿a qué sistema general corresponde?</p>
+                <img src="img/actividad-1.jpeg" alt="Muro de ladrillos con mezcla" class="quiz-img">
+                <div>
+                    <button class="btn-quiz" onclick="verificarRespuesta('seca')">Construcción en Seco</button>
+                    <button class="btn-quiz" onclick="verificarRespuesta('humeda')">Construcción Húmeda</button>
+                </div>
+                <p id="quiz-feedback"></p>
+            </div>
+
+            <footer>
+                © 2026 - Taller de Sistemas Constructivos 4° - ET N°1
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        function verificarRespuesta(respuesta) {
+            const feedbackElement = document.getElementById('quiz-feedback');
+            if(respuesta === 'humeda') {
+                feedbackElement.innerHTML = "✅ ¡Correcto! Se observan ladrillos cerámicos unidos con mortero (húmedo).";
+                feedbackElement.className = "correcto";
+            } else {
+                feedbackElement.innerHTML = "❌ Incorrecto. Eso es mezcla húmeda, por lo tanto no pertenece a la construcción en seco.";
+                feedbackElement.className = "incorrecto";
+            }
+        }
+        function toggleSubmenu(event) {
+            event.preventDefault();
+            const menuItem = document.getElementById('sistemas-menu');
+            menuItem.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
