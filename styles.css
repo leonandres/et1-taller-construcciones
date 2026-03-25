@@ -365,3 +365,84 @@ footer {
     color: var(--primary);
     text-decoration: underline;
 }
+
+/* ===== ESTILOS PARA EL MENÚ CON SUBLISTA ===== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    position: relative;
+}
+
+/* Estilo para el ítem que tiene submenú */
+nav li.has-submenu > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li.has-submenu > a::after {
+    content: "▼";
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+/* Cuando el submenú está abierto, la flecha apunta hacia arriba */
+nav li.has-submenu.open > a::after {
+    transform: rotate(180deg);
+}
+
+/* Submenú oculto por defecto */
+nav .submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0 0 8px 8px;
+    margin-top: 0;
+    padding-left: 1.2rem;
+}
+
+/* Estilos tipográficos para el menú lateral */
+aside nav ul li a {
+    font-family: 'Montserrat', sans-serif; /* Aplicamos la fuente Montserrat */
+    font-weight: 600;                      /* Grosor semibold para que resalte */
+    font-size: 0.95rem;                    /* Ajuste fino del tamaño */
+    letter-spacing: 0.3px;                 /* Separación sutil entre letras */
+    text-transform: uppercase;             /* Opcional: mayúsculas para un look más técnico */
+}
+
+/* Tipografía específica para los submenús (para diferenciarlos del menú principal) */
+aside nav .submenu li a {
+    font-family: 'Inter', sans-serif;      /* Volvemos a Inter para los sub-items */
+    font-weight: 400;                      /* Letra más fina */
+    text-transform: none;                  /* Sin mayúsculas */
+    font-size: 0.85rem;                    /* Un poco más pequeña */
+}
+
+/* Submenú visible cuando la clase "open" está presente */
+nav li.has-submenu.open .submenu {
+    max-height: 300px;
+    transition: max-height 0.4s ease-in;
+}
+
+nav .submenu li {
+    margin: 0;
+}
+
+nav .submenu li a {
+    font-size: 0.85rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-weight: 400;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+nav .submenu li a:hover {
+    border-left-color: var(--accent);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 1.2rem;
+}

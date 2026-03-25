@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Estilos específicos de esta página */
         .quiz-container {
             background: #fff;
             border: 2px dashed var(--primary);
@@ -68,7 +69,17 @@
             <ul>
                 <li><a href="index.html">1. Filosofía del sistema</a></li>
                 <li><a href="historia.html">2. Historia y evolución</a></li>
-                <li><a href="sistemas.html" class="active">3. Sistemas de construcción</a></li>
+                <li class="has-submenu" id="sistemas-menu">
+                    <a href="javascript:void(0)" onclick="toggleSubmenu(event)">3. Sistemas de construcción</a>
+                    <ul class="submenu">
+                        <li><a href="#estructurales">🏗️ Sistemas estructurales</a></li>
+                        <li><a href="#no-estructurales">🧱 Sistemas no estructurales</a></li>
+                        <li><a href="#envolvente">🛡️ Sistemas de envolvente</a></li>
+                        <li><a href="#modulares">📦 Sistemas industrializados</a></li>
+                        <li><a href="steel-framing.html">⚙️ Steel Framing (profundización)</a></li>
+                        <li><a href="wood-framing.html">🌲 Wood Framing (profundización)</a></li>
+                    </ul>
+                </li>
                 <li><a href="tabiqueria.html">4. Tabiquería y placas</a></li>
                 <li><a href="ventajas.html">5. Ventajas técnicas</a></li>
                 <li><a href="guia.html">6. Guía de taller</a></li>
@@ -94,7 +105,7 @@
                 <p style="font-size: 0.95rem; margin-bottom: 0;">En Argentina, existe un organismo dedicado exclusivamente a estudiar, estandarizar y promover este método constructivo, llamado <strong>Instituto de la Construcción en Seco (INCOSE)</strong>. Este instituto afirma que una vivienda construida con Steel Framing pesa apenas un <strong>10%</strong> en comparación con una obra húmeda tradicional. Esto significa una reducción drástica en el transporte de carga pesada, menor consumo de combustible y un ahorro gigante en la logística integral de la obra.</p>
             </div>
 
-            <h3>🏗️ 1. Sistemas estructurales (El esqueleto portante)</h3>
+            <h3 id="estructurales">🏗️ 1. Sistemas estructurales (El esqueleto portante)</h3>
             <p><strong>Atención:</strong> Estos sistemas <strong>soportan el peso de la edificación</strong>. Transmiten las cargas gravitatorias (techos, entrepisos, mobiliario, personas) y las cargas dinámicas (viento, sismos) hacia las fundaciones. Requieren cálculo de ingeniería civil y perfiles de calibres específicos.</p>
 
             <div class="grid-pilares">
@@ -133,7 +144,7 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 4rem;">🧱 2. Sistemas no estructurales (División interior)</h3>
+            <h3 id="no-estructurales" style="margin-top: 4rem;">🧱 2. Sistemas no estructurales (División interior)</h3>
             <p><strong>Atención:</strong> Su función es <strong>dividir, distribuir o revestir ambientes interiores</strong>. Se fabrican con perfiles de acero de menor espesor y no tienen capacidad portante. Jamás deben recibir cargas de techos ni usarse como muros exteriores sin un tratamiento especial.</p>
 
             <div class="grid-pilares">
@@ -155,7 +166,7 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 4rem;">🛡️ 3. Sistemas de envolvente exterior</h3>
+            <h3 id="envolvente" style="margin-top: 4rem;">🛡️ 3. Sistemas de envolvente exterior</h3>
             <p>Estos sistemas se instalan por el lado exterior de la estructura portante. Su función es ser la "piel" del edificio: deben repeler el agua de lluvia, resistir los impactos, tolerar los rayos UV y mejorar la eficiencia energética de la construcción.</p>
 
             <div class="grid-pilares">
@@ -176,12 +187,11 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 4rem;">📦 4. Sistemas industrializados y construcción modular</h3>
+            <h3 id="modulares" style="margin-top: 4rem;">📦 4. Sistemas industrializados y construcción modular</h3>
             <p>Es el nivel máximo de eficiencia en la construcción en seco. Traslada los procesos típicos de una obra a una línea de ensamblaje industrial controlada.</p>
 
             <div class="intro-box" style="border-left-color: var(--primary); background-color: #fff; padding: 0; overflow: hidden;">
-                <iframe width="100%" height="450" src="https://www.youtube-nocookie.com/embed/l-wR75eeAoI" title="
-¿Conoces la construcción modular?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-bottom: 4px solid var(--accent);"></iframe>
+                <iframe width="100%" height="450" src="https://www.youtube-nocookie.com/embed/l-wR75eeAoI" title="¿Conoces la construcción modular?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-bottom: 4px solid var(--accent);"></iframe>
                 <div style="padding: 2rem;">
                     <h4>Módulos 3D de fábrica (Volumétricos)</h4>
                     <p>En este sistema, el edificio se subdivide en grandes "bloques" tridimensionales. Estos módulos se fabrican por completo dentro de una nave industrial. El proceso incluye el armado de la estructura (acero o madera), la colocación de aislantes, emplacado, pintura, instalación de aberturas, e incluso las terminaciones finas como la colocación de pisos, cerámicas de baño, artefactos sanitarios y grifería.</p>
@@ -227,6 +237,42 @@
                 feedbackElement.className = "incorrecto";
             }
         }
+
+        function toggleSubmenu(event) {
+            event.preventDefault();
+            const menuItem = document.getElementById('sistemas-menu');
+            menuItem.classList.toggle('open');
+        }
+
+        document.querySelectorAll('.submenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                const menuItem = document.getElementById('sistemas-menu');
+                menuItem.classList.remove('open');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            const menuItem = document.getElementById('sistemas-menu');
+            const isClickInside = menuItem.contains(event.target);
+            
+            if (!isClickInside && menuItem.classList.contains('open')) {
+                menuItem.classList.remove('open');
+            }
+        });
+
+        document.querySelectorAll('.submenu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
 
 </body>
