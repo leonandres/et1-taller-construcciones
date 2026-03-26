@@ -3,34 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 2: Vidrios y Carpinterías | ET N°1</title>
+    <title>Clase 2: Vidrios y carpinterías | ET N°1</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
-    
-    <style>
-        /* 1. Resaltado suave para la sección actual en el menú */
-        nav ul li a.active {
-            background-color: rgba(255, 255, 255, 0.15); /* Un fondo blanco semitransparente (ideal para menú oscuro) */
-            border-radius: 6px;
-            font-weight: 700;
-            border-left: 4px solid var(--accent, #3498db); /* Una barrita de color a la izquierda para destacar */
-        }
-        
-        /* Nota: Si tu menú es de color blanco/claro, borra el de arriba y usa este: */
-        /* nav ul li a.active { background-color: rgba(0, 0, 0, 0.05); border-left: 4px solid var(--primary, #0056b3); } */
-
-        /* 2. El estilo para la barrita de los títulos (reemplaza los emojis) */
-        .title-bar {
-            display: inline-block;
-            width: 5px;
-            height: 22px;
-            background-color: var(--primary, #0056b3);
-            border-radius: 4px;
-            margin-right: 12px;
-            vertical-align: middle;
-            margin-top: -3px; /* Pequeño ajuste para centrarlo perfecto con la letra */
-        }
-    </style>
 </head>
 <body>
 
@@ -201,7 +176,7 @@
     </main>
 
     <script>
-        // ESTA ES LA MAGIA DEL MENÚ AUTOMÁTICO
+        // MENÚ AUTOMÁTICO
         document.addEventListener("DOMContentLoaded", function() {
             // 1. Obtenemos el nombre del archivo actual (ej: vidrios-y-carpinteria.html)
             const currentPath = window.location.pathname.split('/').pop(); 

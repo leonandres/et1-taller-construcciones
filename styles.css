@@ -202,3 +202,23 @@ p { margin-bottom: 1.2rem; font-size: 1.05rem; }
 .tech-table tr:last-child td { border-bottom: none; }
 
 footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; font-size: 0.9rem; color: #7f8c8d; font-weight: 600; }
+
+/* --- Estilos dinámicos del Menú --- */
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo suave para menú oscuro */
+    border-radius: 6px;
+    font-weight: 700;
+    border-left: 4px solid var(--accent, #3498db); 
+}
+
+/* --- Barrita de los títulos --- */
+.title-bar {
+    display: inline-block;
+    width: 5px;
+    height: 22px;
+    background-color: var(--primary, #0056b3);
+    border-radius: 4px;
+    margin-right: 12px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
