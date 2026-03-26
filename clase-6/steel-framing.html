@@ -24,8 +24,9 @@
                 <li><a href="../clase-4/clase4.html">Clase 4: Pinturas</a></li>
                 
                 <li class="has-submenu" id="sistemas-menu">
-                    <a href="../clase-5/sistemas.html" onclick="toggleSubmenu(event)">Clase 5: Construcción en Seco</a>
+                    <a href="javascript:void(0)" onclick="toggleSubmenu(event)">Clase 5: Construcción en Seco</a>
                     <ul class="submenu">
+                        <li><a href="../clase-5/sistemas.html">Sistemas de Construcción</a></li>
                         <li><a href="../clase-5/historia.html">Historia y Evolución</a></li>
                         <li><a href="../clase-5/tabiqueria.html">Tabiquería y Placas</a></li>
                         <li><a href="../clase-5/ventajas.html">Ventajas y Análisis</a></li>
@@ -60,7 +61,7 @@
 
             <img src="../img/6-7 - base-steel-framing.jpg" alt="Detalle de perfiles y uniones" style="width: 100%; border-radius: 8px; margin: 2rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
 
-            <h3 style="margin-top: 3rem;">📏 1. La anatomía de los perfiles estructurales</h3>
+            <h3 style="margin-top: 3rem;">🏗️ 1. La anatomía de los perfiles estructurales</h3>
             <p>El alma de este sistema son los perfiles conformados en frío. Para transformar una simple bobina de chapa lisa en un elemento estructural rígido, la industria siderúrgica pliega la chapa longitudinalmente dándole formas geométricas específicas que aumentan drásticamente su resistencia a la flexión y compresión.</p>
 
             <div class="grid-pilares" style="margin-top: 1.5rem;">
@@ -77,7 +78,7 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 4rem;">🔩 2. El arte de unir el acero (Fijaciones mecánicas)</h3>
+            <h3 style="margin-top: 4rem;">🏗️ 2. El arte de unir el acero (Fijaciones mecánicas)</h3>
             <p>En la mampostería usamos mortero; en el Steel Framing usamos tornillos calculados por ingenieros. Cada tornillo tiene un límite a la fuerza de "corte" y "arrancamiento". Usar un tornillo equivocado no solo está mal, sino que es un riesgo de colapso.</p>
 
             <table class="tech-table">
@@ -107,7 +108,36 @@
                 </tbody>
             </table>
 
-            <h3 style="margin-top: 4rem;">🥪 3. La envolvente: El muro multicapa</h3>
+            <h3 style="margin-top: 4rem;">🏗️ 3. ¿Cómo hacemos una puerta o ventana? (El desafío estructural)</h3>
+            <p>Ya sabemos que las cargas del techo bajan a través de los montantes (PGC) cada 40 cm. Pero, ¿qué pasa si en el medio de la pared queremos poner una ventana de 2 metros de ancho? Cortaríamos varios montantes, dejando el techo sin apoyo. Para solucionar esto sin que la casa se hunda, el sistema utiliza un marco estructural llamado <strong>Vano</strong>, compuesto por cuatro piezas clave:</p>
+            
+            <div style="background: #f8f9fa; border-radius: 8px; padding: 2rem; border-left: 4px solid var(--primary); margin-top: 1.5rem;">
+                <ul style="line-height: 1.8;">
+                    <li><strong>El Dintel:</strong> Es una viga horizontal reforzada que se coloca justo arriba de la ventana. Recibe todo el peso del techo que venía bajando por los montantes cortados y lo "desvía" hacia los costados.</li>
+                    <li><strong>Montante Rey (King Stud):</strong> Es el perfil vertical entero que va desde el piso hasta el techo, flanqueando la ventana. Ayuda a contener el conjunto.</li>
+                    <li><strong>Montante Criollo (Jack Stud):</strong> Es un montante más corto que va pegado al Montante Rey. Su única función es <em>sostener los extremos del dintel</em>, llevando ese peso desviado directamente a los cimientos.</li>
+                    <li><strong>El Alféizar (Sill):</strong> Es la pieza horizontal inferior donde apoyará la ventana (el antepecho).</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 4rem;">🏗️ 4. Evitando que la casa se caiga: La Rigidización</h3>
+            <p>Imagina una caja de cartón sin tapa y sin fondo. Si la empujas de lado, se aplasta fácilmente convirtiéndose en un rombo. Lo mismo le pasaría a una estructura de Steel Framing si sopla un viento fuerte de costado. A esto se le llama "esfuerzo de corte". Para evitarlo, usamos la <strong>Rigidización</strong> (hacer que la pared se vuelva un bloque indeformable).</p>
+            
+            <p>Según los manuales técnicos, existen dos formas principales de lograr esto en el taller o la obra:</p>
+            
+            <div class="grid-pilares" style="margin-top: 1.5rem;">
+                <div class="pilar-card">
+                    <h4 style="color: #28a745; font-size: 1.2rem;">Opción A: Diafragma de OSB</h4>
+                    <p>Es el método más común hoy en día. Se atornillan placas de madera estructural OSB (de al menos 11.1 mm de espesor) en toda la cara exterior del panel. La madera actúa como un escudo rígido que "traba" todos los perfiles de acero, impidiendo que se inclinen.</p>
+                </div>
+                
+                <div class="pilar-card">
+                    <h4 style="color: #d9534f; font-size: 1.2rem;">Opción B: Cruces de San Andrés</h4>
+                    <p>Si no se usan placas OSB, los ingenieros colocan flejes (tiras planas de acero) tensados en forma de "X" gigante a lo largo de la pared. Estas cintas de acero funcionan a la tracción (como los tirantes de un puente), evitando que el rectángulo del panel se deforme.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 4rem;">🏗️ 5. La envolvente: El muro multicapa</h3>
             <p>Un muro tradicional de ladrillo confía en su "masa" (su gran espesor y peso) para intentar frenar el frío, el calor y el agua. Lamentablemente, es muy poco eficiente. El Steel Framing utiliza un enfoque radicalmente distinto y mucho más científico: <strong>la especialización de materiales</strong>.</p>
             
             <p>En lugar de pedirle a un solo material que haga todo mal, el sistema multicapa superpone láminas y membranas donde <strong>cada una cumple una única función al 100% de eficacia</strong>. Una capa frena el viento, otra frena el agua, otra aísla el ruido y otra soporta el peso. Esto genera muros muy delgados pero con un rendimiento termodinámico que supera ampliamente a la construcción tradicional.</p>
@@ -127,7 +157,28 @@
                 </ol>
             </div>
 
-            <div class="recursos-box">
+            <h3 style="margin-top: 4rem;">🧠 Actividad Práctica: Repaso de Taller</h3>
+            
+            <div class="quiz-container" style="margin-top: 1.5rem;">
+                <p><strong>1. Reconocimiento de perfiles:</strong> Estás armando un panel en el taller y necesitas colocar el montante vertical que soportará el peso de la cubierta. ¿Qué perfil eliges?</p>
+                <div style="margin-top: 1rem;">
+                    <button class="btn-quiz" onclick="verificarQ1('pgu')">PGU (Perfil Galvanizado U)</button>
+                    <button class="btn-quiz" onclick="verificarQ1('pgc')">PGC (Perfil Galvanizado C)</button>
+                </div>
+                <p id="fb-q1" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+            </div>
+
+            <div class="quiz-container" style="margin-top: 1.5rem;">
+                <p><strong>2. Esfuerzo de corte:</strong> El panel ya está atornillado y en pie, pero notas que al empujarlo de costado se deforma fácilmente hacia los lados. ¿Qué elemento estructural te falta colocar para rigidizarlo?</p>
+                <div style="margin-top: 1rem;">
+                    <button class="btn-quiz" onclick="verificarQ2('lana')">Lana de vidrio</button>
+                    <button class="btn-quiz" onclick="verificarQ2('osb')">Placa OSB (Diafragma)</button>
+                    <button class="btn-quiz" onclick="verificarQ2('yeso')">Placa de Yeso interior</button>
+                </div>
+                <p id="fb-q2" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+            </div>
+
+            <div class="recursos-box" style="margin-top: 3rem;">
                 <h3>📚 Material Complementario y Descargas</h3>
                 <ul>
                     <li><a href="#" target="_blank">📄 Manual técnico de perfiles conformados en frío (PDF)</a></li>
@@ -143,8 +194,32 @@
     </main>
 
     <script>
+        // Funciones de la actividad interactiva
+        function verificarQ1(respuesta) {
+            const fb = document.getElementById('fb-q1');
+            if(respuesta === 'pgc') {
+                fb.innerHTML = "✅ ¡Correcto! El PGC tiene pestañas (atiesadores) que le dan una enorme resistencia para soportar peso axial.";
+                fb.className = "correcto";
+            } else {
+                fb.innerHTML = "❌ Incorrecto. El PGU no soporta peso por sí solo, únicamente se utiliza como riel o guía horizontal.";
+                fb.className = "incorrecto";
+            }
+        }
+
+        function verificarQ2(respuesta) {
+            const fb = document.getElementById('fb-q2');
+            if(respuesta === 'osb') {
+                fb.innerHTML = "✅ ¡Exacto! La placa OSB actúa como un escudo rígido (diafragma) que traba los perfiles y evita la deformación por el viento.";
+                fb.className = "correcto";
+            } else {
+                fb.innerHTML = "❌ Incorrecto. Ese material aporta terminación o aislación, pero no tiene una función estructural.";
+                fb.className = "incorrecto";
+            }
+        }
+
+        // Función del menú desplegable
         function toggleSubmenu(event) {
-            event.preventDefault();
+            event.preventDefault(); // Evita que la página salte hacia arriba
             const menuItem = document.getElementById('sistemas-menu');
             menuItem.classList.toggle('open');
         }
