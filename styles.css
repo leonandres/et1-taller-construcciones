@@ -58,6 +58,7 @@ aside {
     flex-direction: column;
     z-index: 100;
     border-right: 4px solid var(--accent);
+    overflow-y: auto;
 }
 
 .school-logo {
