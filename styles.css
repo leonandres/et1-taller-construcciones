@@ -321,8 +321,19 @@ h3 {
 }
 
 p {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
     margin-bottom: 1.2rem;
+    color: var(--text-main);
+    letter-spacing: 0.01em;
+}
+
+.intro-box p {
     font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 450;
 }
 
 /* Links */
@@ -1045,4 +1056,10 @@ aside::-webkit-scrollbar-thumb {
 
 aside::-webkit-scrollbar-thumb:hover {
     background: #f39c12;
+}
+
+/* Padding solo para párrafos que siguen inmediatamente a un h3 */
+h3 + p {
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--accent);
 }
