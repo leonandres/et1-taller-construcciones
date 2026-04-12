@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="pilar-card sin-padding-top">
-                    <img src="https://images.pexels.com/photos/1750566/pexels-photo-1750566.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img" alt="Alma Llena">
+                    <img src="../img/6-9-alma-llena.jpg" class="card-img" alt="Alma Llena">
                     <div class="card-content">
                         <h4>Alma llena (Acero pesado)</h4>
                         <p>Utiliza perfiles laminados en caliente (perfiles doble T). Se reserva para obras que requieren cubrir grandes luces sin columnas intermedias, como naves industriales o centros comerciales.</p>
@@ -150,13 +150,76 @@
                 </div>
             </div>
 
+            <!-- SECCIÓN COMPARATIVA: DIFERENCIAS CLAVE -->
+            <h3 id="comparativa" style="margin-top: 4rem;"><span class="title-bar"></span>5 - Comparativa: ¿Cuál sistema elegir?</h3>
+            <p>Aunque todos son sistemas estructurales en seco, cada uno tiene características muy diferentes que los hacen ideales para distintos tipos de proyectos. Esta tabla resume sus diferencias clave:</p>
+
+            <div style="overflow-x: auto; margin: 2rem 0;">
+                <table class="tech-table" style="min-width: 600px;">
+                    <thead>
+                        <tr>
+                            <th>Sistema</th>
+                            <th>Material principal</th>
+                            <th>Resistencia</th>
+                            <th>Aislación térmica</th>
+                            <th>Velocidad de obra</th>
+                            <th>Costo relativo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Steel Framing</strong></td>
+                            <td>Acero galvanizado (0.9-1.2mm)</td>
+                            <td>Alta / Media</td>
+                            <td>Buena (con lana de vidrio)</td>
+                            <td>Rápida</td>
+                            <td>$$</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wood Framing</strong></td>
+                            <td>Madera aserrada tratada</td>
+                            <td>Media</td>
+                            <td>Muy buena (madera natural)</td>
+                            <td>Rápida</td>
+                            <td>$</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Paneles SIP</strong></td>
+                            <td>OSB + EPS / Poliuretano</td>
+                            <td>Alta</td>
+                            <td>Excelente (incluida en el panel)</td>
+                            <td>Muy rápida</td>
+                            <td>$$$</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alma llena (Acero pesado)</strong></td>
+                            <td>Perfiles doble T laminados</td>
+                            <td>Muy alta</td>
+                            <td>Mala (requiere aislación adicional)</td>
+                            <td>Lenta</td>
+                            <td>$$$$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="intro-box" style="margin-top: 1rem;">
+                <h4 style="margin-bottom: 0.5rem;">💡 Resumen rápido</h4>
+                <ul style="margin-bottom: 0; padding-left: 1.5rem;">
+                    <li><strong>Steel Framing:</strong> El más equilibrado. Ideal para viviendas y edificios de hasta 4 pisos.</li>
+                    <li><strong>Wood Framing:</strong> Económico y sostenible. Muy usado en EE.UU., pero la madera requiere tratamiento.</li>
+                    <li><strong>Paneles SIP:</strong> Máxima eficiencia energética. Perfecto para climas extremos.</li>
+                    <li><strong>Alma llena:</strong> Para grandes luces (naves industriales, puentes, centros comerciales).</li>
+                </ul>
+            </div>
+
             <div class="quiz-container">
                 <h3><span class="title-bar"></span>Taller interactivo: Pon a prueba tu ojo clínico</h3>
                 <p>Observa la siguiente imagen de una obra en ejecución. Basado en los materiales y el método de unión que ves, ¿a qué sistema general corresponde?</p>
                 <img src="../img/actividad-1.jpeg" alt="Muro de ladrillos con mezcla" class="quiz-img">
                 <div>
-                    <button class="btn-quiz" onclick="verificarRespuesta('seca')">Construcción en Seco</button>
-                    <button class="btn-quiz" onclick="verificarRespuesta('humeda')">Construcción Húmeda</button>
+                    <button class="btn-quiz" onclick="verificarRespuesta('seca')">Construcción en seco</button>
+                    <button class="btn-quiz" onclick="verificarRespuesta('humeda')">Construcción húmeda</button>
                 </div>
                 <p id="quiz-feedback"></p>
             </div>
@@ -170,10 +233,23 @@
             </div>
 
             <footer>
-                © 2026 - Taller de Sistemas Constructivos 4° - ET N°1
+                © 2026 - Taller de sistemas constructivos 4° - ET N°1
             </footer>
         </div>
     </main>
+
+    <!-- MODAL PARA TARJETAS -->
+<div id="sistemaModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-titulo">Título</h3>
+            <span class="modal-close">&times;</span>
+        </div>
+        <div class="modal-body" id="modal-contenido">
+            <p>Contenido del sistema...</p>
+        </div>
+    </div>
+</div>
 
     <script>
         // Funciones del Cuestionario
@@ -238,6 +314,89 @@
                 }
             });
         });
+
+        // ===== MODAL PARA TARJETAS DE SISTEMAS =====
+(function() {
+    // Datos de cada sistema
+    const sistemasData = {
+       'Steel Framing': {
+        descripcion: 'Sistema estructural compuesto por perfiles de acero galvanizado conformado en frío. <strong>Proceso de armado en obra:</strong><br><br>' +
+            '🔩 <strong>1. Corte y preparación:</strong> Los perfiles PGC (montantes) y PGU (soleras) se cortan en obra según las dimensiones del plano.<br>' +
+            '🔩 <strong>2. Armado del esqueleto:</strong> Se fijan las soleras al piso y techo, luego se insertan los montantes cada 40 o 60 cm, atornillándolos con tornillos autoperforantes.<br>' +
+            '🔩 <strong>3. Rigidización:</strong> Se atornillan placas OSB (tablero estructural) en la cara exterior para evitar deformaciones por viento.<br>' +
+            '🔩 <strong>4. Aislación térmica/acústica:</strong> Se coloca lana de vidrio o celulosa dentro de la cavidad entre montantes.<br>' +
+            '🔩 <strong>5. Barrera de vapor:</strong> Se instala un film de nylon del lado interior (cálido) para evitar condensación.<br>' +
+            '🔩 <strong>6. Terminación interior:</strong> Se atornillan placas de yeso (Drywall) que luego se masillan y pintan.<br><br>' +
+            '<strong>Las capas del muro (de afuera hacia adentro):</strong><br>' +
+            '🏠 Revestimiento exterior (Siding, chapa, ladrillo visto)<br>' +
+            '🏠 Placa EPS (aislación exterior opcional)<br>' +
+            '🏠 Barrera hidrófuga (Tyvek o similar)<br>' +
+            '🏠 Placa OSB (rigidización estructural)<br>' +
+            '🏠 Estructura de acero + lana de vidrio (aislación interna)<br>' +
+            '🏠 Barrera de vapor<br>' +
+            '🏠 Placa de yeso (terminación interior)',
+        aplicacion: 'Viviendas unifamiliares, edificios de hasta 4 pisos, ampliaciones, oficinas.',
+        datoExtra: 'Pesa solo un 10% de una estructura de hormigón equivalente. Es resistente al fuego, termitas y hongos.'
+    },
+        'Wood Framing': {
+            descripcion: 'Entramado de madera aserrada tratada (pino, abeto). Las uniones se realizan con clavadoras neumáticas. Ventajas: renovable, excelente aislante natural, fácil de trabajar. Desventajas: requiere tratamiento antihumedad y contra insectos.',
+            aplicacion: 'Viviendas, cabañas, estructuras temporales.',
+            datoExtra: 'Es el sistema más usado en Estados Unidos y Canadá.'
+        },
+        'Paneles SIP': {
+            descripcion: 'Panel sándwich estructural: dos tableros OSB con núcleo de espuma rígida (EPS o poliuretano). Ventajas: aislación incorporada, montaje ultrarrápido. Desventajas: costo más elevado, requieren grúa para montaje.',
+            aplicacion: 'Casas pasivas, oficinas, colegios, estructuras eficientes.',
+            datoExtra: 'Reducen el consumo energético hasta un 50% comparado con construcción tradicional.'
+        },
+        'Alma llena (Acero pesado)': {
+            descripcion: 'Perfiles laminados en caliente (dobles T, IPN, IPE). Se unen mediante soldadura o bulones. Ventajas: máxima resistencia, permite grandes luces sin columnas. Desventajas: costo muy alto, requiere grúas y soldadores calificados.',
+            aplicacion: 'Naves industriales, puentes, rascacielos, centros comerciales.',
+            datoExtra: 'Es el sistema usado en estructuras de gran porte como estadios o aeropuertos.'
+        }
+    };
+
+    const modal = document.getElementById('sistemaModal');
+    const modalTitulo = document.getElementById('modal-titulo');
+    const modalContenido = document.getElementById('modal-contenido');
+    const closeBtn = document.querySelector('.modal-close');
+
+    // Cerrar modal
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Abrir modal con datos específicos
+    function openModal(sistemaNombre) {
+        const data = sistemasData[sistemaNombre];
+        if (data) {
+            modalTitulo.textContent = sistemaNombre;
+            modalContenido.innerHTML = `
+                <p><strong>📖 Descripción:</strong> ${data.descripcion}</p>
+                <p><strong>🏗️ Aplicación típica:</strong> ${data.aplicacion}</p>
+                <p><strong>🔧 Dato técnico:</strong> ${data.datoExtra}</p>
+                <hr style="margin: 1rem 0; border-color: var(--border-color);">
+                <p style="font-size: 0.9rem; color: var(--text-muted);">📌 Haz clic fuera del modal o en la ✕ para cerrar.</p>
+            `;
+            modal.style.display = 'flex';
+        }
+    }
+
+    // Asignar evento click a cada tarjeta del grid-pilares
+    const tarjetas = document.querySelectorAll('.grid-pilares .pilar-card');
+    tarjetas.forEach(tarjeta => {
+        const titulo = tarjeta.querySelector('h4');
+        if (titulo) {
+            const nombreSistema = titulo.textContent.trim();
+            tarjeta.addEventListener('click', () => openModal(nombreSistema));
+        }
+    });
+
+    // Eventos de cierre
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+})();
     </script>
     <script src="../sidebar.js"></script>
 </body>
