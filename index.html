@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Sist. Constructivos en Seco | 4TO Año | ET N°1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,8 +16,8 @@
         <h1>Sistemas Constructivos</h1>
         <span class="school-name">4° Año - ET N°1</span>
 
-        <button id="btn-theme" class="theme-btn" onclick="toggleTheme()">
-            🌓 
+        <button id="btn-theme" class="theme-btn" aria-label="Cambiar tema claro/oscuro">
+            🌙
         </button>
 
         <nav>
@@ -27,7 +29,7 @@
                 <li><a href="clase-4/clase4.html">Clase 4: Pinturas</a></li>
                 
                 <li class="has-submenu" id="sistemas-menu">
-                    <a href="javascript:void(0)" onclick="toggleSubmenu(event)">Clase 5: Construcción en seco</a>
+                    <a href="#" id="submenu-trigger" aria-expanded="false">Clase 5: Construcción en seco</a>
                     <ul class="submenu">
                         <li><a href="clase-5/sistemas.html">Sistemas de construcción</a></li>
                         <li><a href="clase-5/historia.html">Historia y evolución</a></li>
@@ -102,6 +104,9 @@
                 </a>
             </div>
 
+            <!-- Botón de modo lectura -->
+            <button id="btn-lectura" class="btn-lectura" style="margin: 2rem auto 0; display: block;">📖 Modo lectura</button>
+
             <footer>
                 © 2026 - Taller de Sistemas Constructivos 4° - ET N°1
             </footer>
@@ -109,42 +114,66 @@
     </main>
 
     <script>
-        function toggleSubmenu(event) {
-            event.preventDefault();
+        // ===== SUBMENÚ (sin onclick inline) =====
+        (function() {
+            const submenuTrigger = document.getElementById('submenu-trigger');
             const menuItem = document.getElementById('sistemas-menu');
-            menuItem.classList.toggle('open');
-        }
-    </script>
-
-    <script>
-        // --- SCRIPT DE MODO CLARO/OSCURO ---
-        function toggleTheme() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-            const btn = document.getElementById('btn-theme');
             
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                btn.innerHTML = '☀️ Modo Claro';
-            } else {
-                localStorage.setItem('theme', 'light');
-                btn.innerHTML = '🌙 Modo Oscuro';
+            if (submenuTrigger && menuItem) {
+                submenuTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const isOpen = menuItem.classList.contains('open');
+                    menuItem.classList.toggle('open');
+                    submenuTrigger.setAttribute('aria-expanded', !isOpen);
+                });
             }
-        }
+        })();
 
-        // Revisar al cargar la página si el usuario ya había elegido un tema
-        document.addEventListener("DOMContentLoaded", function() {
+        // ===== MODO OSCURO/CLARO (corregido) =====
+        (function() {
+            const themeBtn = document.getElementById('btn-theme');
+            if (!themeBtn) return;
+            
+            // Función para actualizar el texto del botón
+            function updateThemeButton() {
+                const isDark = document.body.classList.contains('dark-mode');
+                themeBtn.innerHTML = isDark ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+            }
+            
+            // Cargar tema guardado (usando 'dark-mode' consistente)
             const savedTheme = localStorage.getItem('theme');
-            const btn = document.getElementById('btn-theme');
-            
-            if (savedTheme === 'dark') {
+            if (savedTheme === 'dark-mode') {
                 document.body.classList.add('dark-mode');
-                if (btn) btn.innerHTML = '☀️ Modo Claro';
-            } else {
-                if (btn) btn.innerHTML = '🌙 Modo Oscuro';
             }
-        });
-        // -----------------------------------
+            updateThemeButton();
+            
+            // Evento click (seguro, sin inline)
+            themeBtn.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark-mode' : 'light');
+                updateThemeButton();
+            });
+        })();
+
+        // ===== MODO LECTURA =====
+        (function() {
+            const lecturaBtn = document.getElementById('btn-lectura');
+            if (lecturaBtn) {
+                // Cargar estado guardado
+                if (localStorage.getItem('modo-lectura') === 'activo') {
+                    document.body.classList.add('modo-lectura');
+                    lecturaBtn.textContent = '📖 Salir del modo lectura';
+                }
+                
+                lecturaBtn.addEventListener('click', function() {
+                    document.body.classList.toggle('modo-lectura');
+                    const isReadingMode = document.body.classList.contains('modo-lectura');
+                    localStorage.setItem('modo-lectura', isReadingMode ? 'activo' : 'inactivo');
+                    lecturaBtn.textContent = isReadingMode ? '📖 Salir del modo lectura' : '📖 Modo lectura';
+                });
+            }
+        })();
     </script>
 </body>
 </html>
