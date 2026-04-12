@@ -15,8 +15,8 @@
         <h1>Sistemas Constructivos</h1>
         <span class="school-name">4° Año - ET N°1</span>
 
-        <button id="btn-theme" class="theme-btn" onclick="toggleTheme()">
-            🌓 
+        <button id="btn-theme" class="theme-btn" aria-label="Cambiar tema claro/oscuro">
+            ☾
         </button>
         
         <nav>
@@ -107,62 +107,39 @@
     </main>
 
     <script>
-        function verificarRespuesta(respuesta) {
-            const feedbackElement = document.getElementById('quiz-feedback');
-            if(respuesta === 'frame') {
-                feedbackElement.innerHTML = "✅ ¡Excelente decisión! El sistema Frame se cuelga desde adentro con grúas de piso, es rapidísimo y no requiere andamios exteriores.";
-                feedbackElement.className = "correcto";
-            } else {
-                feedbackElement.innerHTML = "❌ Cuidado. El sistema Stick requiere armar pieza por pieza en el exterior, lo cual en 40 pisos es muy lento y peligroso.";
-                feedbackElement.className = "incorrecto";
-            }
+    function verificarRespuesta(respuesta) {
+        const feedbackElement = document.getElementById('quiz-feedback');
+        if(respuesta === 'frame') {
+            feedbackElement.innerHTML = "✅ ¡Excelente decisión! El sistema Frame se cuelga desde adentro con grúas de piso, es rapidísimo y no requiere andamios exteriores.";
+            feedbackElement.className = "correcto";
+        } else {
+            feedbackElement.innerHTML = "❌ Cuidado. El sistema Stick requiere armar pieza por pieza en el exterior, lo cual en 40 pisos es muy lento y peligroso.";
+            feedbackElement.className = "incorrecto";
         }
+    }
 
-        function toggleSubmenu(event) {
-            event.preventDefault();
-            const menuItem = document.getElementById('sistemas-menu');
-            menuItem.classList.toggle('open');
-        }
+    function toggleSubmenu(event) {
+        event.preventDefault();
+        const menuItem = document.getElementById('sistemas-menu');
+        menuItem.classList.toggle('open');
+    }
 
-        function toggleTheme() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-            const btn = document.getElementById('btn-theme');
-            
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                btn.innerHTML = '☀️ Modo Claro';
-            } else {
-                localStorage.setItem('theme', 'light');
-                btn.innerHTML = '🌙 Modo Oscuro';
-            }
-        }
+    document.addEventListener("DOMContentLoaded", function() {
+        // ===== RESALTAR MENÚ ACTIVO (conservado) =====
+        const currentPath = window.location.pathname.split('/').pop(); 
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const submenu = document.getElementById('sistemas-menu');
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const savedTheme = localStorage.getItem('theme');
-            const btn = document.getElementById('btn-theme');
-            
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                if (btn) btn.innerHTML = '☀️ Modo Claro';
-            } else {
-                if (btn) btn.innerHTML = '🌙 Modo Oscuro';
-            }
-
-            const currentPath = window.location.pathname.split('/').pop(); 
-            const navLinks = document.querySelectorAll('nav ul li a');
-            const submenu = document.getElementById('sistemas-menu');
-            
-            navLinks.forEach(link => {
-                const linkPath = link.getAttribute('href').split('/').pop();
-                if (linkPath && currentPath === linkPath && linkPath !== 'javascript:void(0)') {
-                    link.classList.add('active');
-                    if (link.closest('.submenu')) {
-                        submenu.classList.add('open');
-                    }
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href').split('/').pop();
+            if (linkPath && currentPath === linkPath && linkPath !== 'javascript:void(0)') {
+                link.classList.add('active');
+                if (link.closest('.submenu')) {
+                    submenu.classList.add('open');
                 }
-            });
+            }
         });
+    });
     </script>
     <script src="../sidebar.js"></script>
 </body>

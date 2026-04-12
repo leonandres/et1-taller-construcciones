@@ -15,8 +15,8 @@
         <h1>Sistemas Constructivos</h1>
         <span class="school-name">4° Año - ET N°1</span>
 
-        <button id="btn-theme" class="theme-btn" onclick="toggleTheme()">
-            🌓 
+        <button id="btn-theme" class="theme-btn" aria-label="Cambiar tema claro/oscuro">
+            ☾
         </button>
         
         <nav>
@@ -163,33 +163,8 @@
             menuItem.classList.toggle('open');
         }
 
-        // Funciones del Modo Oscuro
-        function toggleTheme() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-            const btn = document.getElementById('btn-theme');
-            
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                btn.innerHTML = '☀️ Modo Claro';
-            } else {
-                localStorage.setItem('theme', 'light');
-                btn.innerHTML = '🌙 Modo Oscuro';
-            }
-        }
-
         // Carga inicial del documento
         document.addEventListener("DOMContentLoaded", function() {
-            const savedTheme = localStorage.getItem('theme');
-            const btn = document.getElementById('btn-theme');
-            
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                if (btn) btn.innerHTML = '☀️ Modo Claro';
-            } else {
-                if (btn) btn.innerHTML = '🌙 Modo Oscuro';
-            }
-
             const currentPath = window.location.pathname.split('/').pop(); 
             const navLinks = document.querySelectorAll('nav ul li a');
             const submenu = document.getElementById('sistemas-menu');
