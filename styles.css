@@ -47,9 +47,9 @@ body {
 
 /* Ajustes automáticos para modo oscuro */
 .container, .timeline-content, .grid-item, .clase-card, .pilar-card, .recursos-box {
-    background-color: var(--card-bg) !important;
+    background-color: var(--card-bg);
     color: var(--text-main);
-    border-color: var(--border-color) !important;
+    border-color: var(--border-color);
     transition: all 0.3s ease;
 }
 
@@ -66,7 +66,6 @@ aside {
     z-index: 100;
     border-right: 4px solid var(--accent);
     overflow-y: auto;
-    scrollbar-width: thin;
 }
 
 /* Para que la barra de scroll del menú se vea más elegante */
@@ -86,17 +85,6 @@ aside::-webkit-scrollbar-thumb {
 
 aside::-webkit-scrollbar-thumb:hover {
     background: #f39c12;
-}
-.school-logo {
-    width: 85%;
-    max-width: 160px;
-    height: auto;
-    display: block;
-    margin: 0 auto 1.5rem auto;
-    background-color: #ffffff;
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 aside h1 {
@@ -809,11 +797,6 @@ main, .container, .clase-card, .pilar-card {
         border-bottom: 4px solid var(--accent);
     }
 
-    .school-logo {
-        width: 60px;
-        margin: 0;
-    }
-
     aside h1 {
         font-size: 1rem;
         margin: 0;
@@ -1037,25 +1020,6 @@ main, .container, .clase-card, .pilar-card {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Personalizar barra de scroll (se ve más moderna) */
-aside::-webkit-scrollbar {
-    width: 5px;
-}
-
-aside::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-aside::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: 10px;
-}
-
-aside::-webkit-scrollbar-thumb:hover {
-    background: #f39c12;
 }
 
 /* Padding solo para párrafos que siguen inmediatamente a un h3 */
