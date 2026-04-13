@@ -56,7 +56,7 @@ body {
 /* ===== BARRA LATERAL ===== */
 aside {
     width: 280px;
-    background-color: var(--primary);
+    background: linear-gradient(145deg, #1a2a3a 0%, #0f1a24 100%);
     color: white;
     height: 100vh;
     position: fixed;
@@ -99,6 +99,10 @@ aside .school-name {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     display: block;
+}
+
+body.dark-mode aside {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a365d 100%);
 }
 
 /* ===== BOTÓN DE TEMA ===== */
@@ -430,15 +434,85 @@ a:hover {
 .hero-home {
     background: linear-gradient(135deg, var(--primary) 0%, #1a365d 100%);
     color: white;
-    padding: 3rem 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
+    padding: 2rem;
+    margin: -2rem -2rem 2rem -2rem;  /* Sangra hacia los lados del main */
+    text-align: left;
+}
+
+/* El contenedor interno mantiene el ancho legible */
+.hero-home .hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero-home .badge {
+    background: var(--accent);
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 .hero-home h2 {
     color: white;
-    margin-top: 0;
-    font-size: 2.2rem;
+    margin: 0 0 0.75rem 0;
+    font-size: 2rem;
+    padding-left: 0;
+    text-align: left;
+}
+
+.hero-home h2::before {
+    display: none; /* Eliminar la barra izquierda del h2 global */
+}
+
+
+.hero-home p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Botón llamativo en el hero */
+.btn-hero {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 28px;
+    background: var(--accent);
+    color: white;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-hero:hover {
+    background: #f39c12;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-full p,
+.hero-full .hero-subtitle {
+    max-width: 100%;
+    
+    max-width: none;  /* Sin límite máximo */
+}
+
+/* En móvil, ajustar el margen negativo */
+@media (max-width: 900px) {
+    .hero-home {
+        margin: -1rem -1rem 1.5rem -1rem;
+        padding: 1.5rem;
+    }
 }
 
 /* Grid Pilares */
@@ -937,6 +1011,7 @@ main, .container, .clase-card, .pilar-card {
     font-size: 1.8rem;
     color: var(--primary);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
 }
 
 .dark-mode .school-logo-text {
@@ -1115,4 +1190,29 @@ h3 + p {
 
 .pilar-card:active {
     transform: scale(0.98);
+}
+
+/* Permitir que el párrafo del index ocupe más ancho */
+.hero-text-full {
+    max-width: 700px;  /* Aumentado de 600px a 700px */
+}
+
+/* Estilo especial para la página de inicio (ocupa más ancho) */
+.hero-full .hero-content {
+    max-width: 100%;  /* Ocupa todo el espacio disponible */
+}
+
+.hero-full h2 {
+    font-size: 2.2rem;
+    max-width: 100%;
+}
+
+.hero-full p {
+    max-width: 100%;
+    max-width: none;
+}
+
+.hero-full .hero-subtitle {
+    max-width: 100%;
+    max-width: none;
 }

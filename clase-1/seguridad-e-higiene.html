@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguridad e Higiene | ET N°1</title>
+    <title>Seguridad e higiene | ET N°1</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><!-- Contorno del edificio --><rect x='25' y='20' width='50' height='65' fill='none' stroke='%231a2a3a' stroke-width='2.5'/><line x1='25' y1='40' x2='75' y2='40' stroke='%231a2a3a' stroke-width='1.5'/><line x1='25' y1='55' x2='75' y2='55' stroke='%231a2a3a' stroke-width='1.5'/><line x1='25' y1='70' x2='75' y2='70' stroke='%231a2a3a' stroke-width='1.5'/><rect x='32' y='43' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='46' y='43' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='60' y='43' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='32' y='58' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='46' y='58' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='60' y='58' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='32' y='73' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='46' y='73' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='60' y='73' width='8' height='8' fill='none' stroke='%231a2a3a' stroke-width='1'/><rect x='42' y='83' width='16' height='10' fill='none' stroke='%231a2a3a' stroke-width='1.5'/><line x1='50' y1='20' x2='50' y2='10' stroke='%231a2a3a' stroke-width='1.5'/></svg>">
     <link rel="stylesheet" href="../styles.css">
@@ -11,10 +11,15 @@
 <body>
 
     <aside>
-        <img src="../img/otto-krause-1.svg" alt="Logo ET N°1" class="school-logo">
-        
-        <h1>Sistemas Constructivos</h1>
-        <span class="school-name">4° Año - ET N°1</span>
+        <div class="school-header">
+            <div class="school-logo-text">
+                <span class="barra">|</span> ET N°1
+            </div>
+            <div class="school-titles">
+                <h1>Sistemas constructivos</h1>
+                <span class="school-name">4° Año - Taller</span>
+            </div>
+        </div>
 
         <button id="btn-theme" class="theme-btn" aria-label="Cambiar tema claro/oscuro">
             ☾
@@ -22,10 +27,10 @@
         
         <nav>
             <ul>
-                <li><a href="../index.html">Inicio del Taller</a></li>
-                <li><a href="seguridad-e-higiene.html">Clase 1: Seg. e Higiene</a></li>
-                <li><a href="../clase-2/vidrios-y-carpinteria.html">Clase 2: Vidrios y Carpinterías</a></li>
-                <li><a href="../clase-3/clase3.html">Clase 3: Pieles de Vidrio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="seguridad-e-higiene.html">Clase 1: Seg. e higiene</a></li>
+                <li><a href="../clase-2/vidrios-y-carpinteria.html">Clase 2: Vidrios y carpinterías</a></li>
+                <li><a href="../clase-3/clase3.html">Clase 3: Pieles de vidrio</a></li>
                 <li><a href="../clase-4/clase4.html">Clase 4: Pinturas</a></li>
                 
                 <li class="has-submenu" id="sistemas-menu">
@@ -46,8 +51,13 @@
 
     <main>
         <div class="container">
-            <span class="badge">Unidad temática 1</span>
-            <h2>Seguridad e Higiene en Obra</h2>
+            <div class="hero-home">
+                <span class="badge">Unidad temática 1</span>
+                <h2>Seguridad e higiene en obra</h2>
+                <p>
+                    Protocolos, EPP y prevención de riesgos en el taller de construcciones.
+                </p>
+            </div>
             
             <div class="intro-box">
                 <p>La <strong>higiene y seguridad en el trabajo</strong> tiene que ver con la prevención de todo tipo de daños a la salud de los trabajadores. En una obra existen numerosos recaudos que deben ser tenidos en cuenta para prevenir accidentes y lesiones.</p>
